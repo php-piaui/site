@@ -1,24 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PHP Piauí - Comunidade</title>
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
+
 <body>
+    <!-- This Design is based on columns -->
     <div class="bg-purple-950 text-white w-screen h-screen flex justify-center">
         <div class="flex flex-col justify-center min-h-screen">
+            <!-- This represents a column -->
             <div class="flex justify-center">
-                conteudo 1
+                <!-- note: you can add as many columns as you want -->
             </div>
+            <!-- This represents another column -->
             <div class="flex justify-center">
-                <img src="assets/img/lancamento-phpi.jpg" class=" px-3 md:w-1/2" alt="Inscrições PHPi">
+                <a id="link-inscricao"
+                    class="px-3 hidden md:flex w-1/2">
+                    <img src="assets/img/lancamento-phpi.jpg" alt="Inscrições PHPi">
+                </a>
+                <a id="link-inscricao"
+                    class="px-3 md:hidden flex">
+                    <img src="assets/img/lancamento-phpi-mobile.jpg" alt="Inscrições PHPi">
+                </a>
             </div>
+            <!-- Every time you wanna add a colomn item, duplicate this -->
             <div class="flex justify-center">
-                <div class="">subconteudo 2</div>
+                <div class="flex flex-col justify-center">
+                    <div class="text-center">
+                        <a href="https://bit.ly/phppiaui-whatsapp">
+                            <button type="button"
+                                class="border border-purple-500 bg-purple-500 text-white rounded-md px-4 py-2 m-2 transition duration-500 ease select-none hover:bg-purple-600 focus:outline-none focus:shadow-outline">
+                                #JunsteSeAManada
+                                <img src="assets/img/whatsapp-svgrepo-com.svg" class="inline-block" width="15" alt="" srcset="">
+                            </button>
+                        </a>
+                    </div>
+                    <div class="text-center">
+                        <a id="link-inscricao">
+                            <button type="button"
+                                class="border border-purple-500 bg-purple-500 text-white rounded-md px-4 py-2 m-2 transition duration-500 ease select-none hover:bg-purple-600 focus:outline-none focus:shadow-outline">
+                                Inscreva-se 
+                            </button>
+                        </a>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
+    <script src="assets/js/index.js" defer></script>
 </body>
+
 </html>
