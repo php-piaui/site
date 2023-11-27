@@ -1,0 +1,19 @@
+{
+    "name": "phppiaui/site",
+    "description": "Site oficial da comunidade de desenvolvedores PHP do Piauí",
+    "type": "project",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Phppiaui\\Site\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Bruno Oliveira",
+            "email": "bds.commus@gmail.com"
+        }
+    ],
+    "minimum-stability": "alpha",
+    "require": {}
+}
