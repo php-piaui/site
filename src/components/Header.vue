@@ -9,27 +9,27 @@ const mobileMenuOpen = ref(false)
   >
     <div class="container mx-auto px-4 py-3">
       <div class="flex justify-between items-center">
-        <a href="#" class="font-bold text-2xl text-indigo-600">
-          <span class="text-indigo-800">PHP</span>este
+        <a href="#" class="font-bold text-2xl text-violet-600">
+          <span class="text-violet-800">PHP</span>este
         </a>
 
         <div class="flex items-center space-x-4">
           <nav class="hidden md:flex space-x-6">
-            <a href="#about" class="text-gray-700 hover:text-indigo-600 transition-colors">Sobre</a>
-            <a href="#tickets" class="text-gray-700 hover:text-indigo-600 transition-colors"
+            <a href="#about" class="text-gray-700 hover:text-violet-600 transition-colors">Sobre</a>
+            <a href="#tickets" class="text-gray-700 hover:text-violet-600 transition-colors"
               >Ingressos</a
             >
-            <a href="#speakers" class="text-gray-700 hover:text-indigo-600 transition-colors"
+            <a href="#speakers" class="text-gray-700 hover:text-violet-600 transition-colors"
               >Palestrantes</a
             >
-            <a href="#sponsors" class="text-gray-700 hover:text-indigo-600 transition-colors"
+            <a href="#sponsors" class="text-gray-700 hover:text-violet-600 transition-colors"
               >Patrocinadores</a
             >
           </nav>
 
           <a
             href="#register"
-            class="hidden md:block bg-indigo-600 hover:bg-indigo-700 text-white px-4 py-2 rounded-md transition-colors font-medium"
+            class="hidden md:block bg-violet-600 hover:bg-violet-700 text-white px-4 py-2 rounded-md transition-colors font-medium"
           >
             Inscreva-se
           </a>
@@ -49,31 +49,31 @@ const mobileMenuOpen = ref(false)
           <a
             href="#about"
             @click="mobileMenuOpen = false"
-            class="text-gray-700 hover:text-indigo-600 transition-colors"
+            class="text-gray-700 hover:text-violet-600 transition-colors"
             >Sobre</a
           >
           <a
             href="#tickets"
             @click="mobileMenuOpen = false"
-            class="text-gray-700 hover:text-indigo-600 transition-colors"
+            class="text-gray-700 hover:text-violet-600 transition-colors"
             >Ingressos</a
           >
           <a
             href="#speakers"
             @click="mobileMenuOpen = false"
-            class="text-gray-700 hover:text-indigo-600 transition-colors"
+            class="text-gray-700 hover:text-violet-600 transition-colors"
             >Palestrantes</a
           >
           <a
             href="#sponsors"
             @click="mobileMenuOpen = false"
-            class="text-gray-700 hover:text-indigo-600 transition-colors"
+            class="text-gray-700 hover:text-violet-600 transition-colors"
             >Patrocinadores</a
           >
           <a
             href="#register"
             @click="mobileMenuOpen = false"
-            class="bg-indigo-600 hover:bg-indigo-700 text-white px-4 py-2 rounded-md transition-colors font-medium text-center"
+            class="bg-violet-600 hover:bg-violet-700 text-white px-4 py-2 rounded-md transition-colors font-medium text-center"
           >
             Inscreva-se
           </a>

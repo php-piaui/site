@@ -5,7 +5,7 @@
     <div class="container mx-auto px-4">
       <div class="text-center mb-12">
         <h2 class="text-3xl md:text-4xl font-bold mb-4 text-gray-900">Lotes de Ingressos</h2>
-        <div class="w-24 h-1 bg-indigo-600 mx-auto mb-6"></div>
+        <div class="w-24 h-1 bg-violet-600 mx-auto mb-6"></div>
         <p class="text-lg text-gray-700 max-w-2xl mx-auto">
           Garanta sua vaga no PHPeste 2025 com preços especiais nos primeiros lotes.
         </p>
@@ -18,9 +18,9 @@
           data-aos="fade-up"
           data-aos-delay="100"
         >
-          <div class="bg-indigo-600 text-white py-4 px-6">
+          <div class="bg-violet-600 text-white py-4 px-6">
             <h3 class="text-xl font-bold">Lote Especial (PI)</h3>
-            <p class="text-indigo-200">15/04 até 15/05</p>
+            <p class="text-violet-200">15/04 até 15/05</p>
           </div>
           <div class="p-6">
             <div class="mb-6">
@@ -44,7 +44,7 @@
             <div class="pt-4 border-t border-gray-200">
               <div class="flex justify-between items-center">
                 <span class="font-medium text-gray-700">Vagas</span>
-                <span class="font-bold text-indigo-600">90 ingressos</span>
+                <span class="font-bold text-violet-600">90 ingressos</span>
               </div>
             </div>
           </div>
@@ -56,9 +56,9 @@
           data-aos="fade-up"
           data-aos-delay="200"
         >
-          <div class="bg-indigo-500 text-white py-4 px-6">
+          <div class="bg-violet-500 text-white py-4 px-6">
             <h3 class="text-xl font-bold">Primeiro Lote</h3>
-            <p class="text-indigo-200">16/05 até 16/06</p>
+            <p class="text-violet-200">16/05 até 16/06</p>
           </div>
           <div class="p-6">
             <div class="mb-6">
@@ -82,7 +82,7 @@
             <div class="pt-4 border-t border-gray-200">
               <div class="flex justify-between items-center">
                 <span class="font-medium text-gray-700">Vagas</span>
-                <span class="font-bold text-indigo-600">90 ingressos</span>
+                <span class="font-bold text-violet-600">90 ingressos</span>
               </div>
             </div>
           </div>
@@ -94,9 +94,9 @@
           data-aos="fade-up"
           data-aos-delay="300"
         >
-          <div class="bg-indigo-500 text-white py-4 px-6">
+          <div class="bg-violet-500 text-white py-4 px-6">
             <h3 class="text-xl font-bold">Segundo Lote</h3>
-            <p class="text-indigo-200">17/06 até 31/08</p>
+            <p class="text-violet-200">17/06 até 31/08</p>
           </div>
           <div class="p-6">
             <div class="mb-6">
@@ -120,7 +120,7 @@
             <div class="pt-4 border-t border-gray-200">
               <div class="flex justify-between items-center">
                 <span class="font-medium text-gray-700">Vagas</span>
-                <span class="font-bold text-indigo-600">100 ingressos</span>
+                <span class="font-bold text-violet-600">100 ingressos</span>
               </div>
             </div>
           </div>
@@ -132,9 +132,9 @@
           data-aos="fade-up"
           data-aos-delay="400"
         >
-          <div class="bg-indigo-500 text-white py-4 px-6">
+          <div class="bg-violet-500 text-white py-4 px-6">
             <h3 class="text-xl font-bold">Terceiro Lote</h3>
-            <p class="text-indigo-200">01/09 até 31/09</p>
+            <p class="text-violet-200">01/09 até 31/09</p>
           </div>
           <div class="p-6">
             <div class="mb-6">
@@ -158,7 +158,7 @@
             <div class="pt-4 border-t border-gray-200">
               <div class="flex justify-between items-center">
                 <span class="font-medium text-gray-700">Vagas</span>
-                <span class="font-bold text-indigo-600">80 ingressos</span>
+                <span class="font-bold text-violet-600">80 ingressos</span>
               </div>
             </div>
           </div>
@@ -168,7 +168,7 @@
       <div class="text-center mt-10">
         <a
           href="#register"
-          class="inline-block bg-indigo-600 hover:bg-indigo-700 text-white font-medium py-3 px-8 rounded-lg shadow-md transition-colors transform hover:scale-105 duration-200"
+          class="inline-block bg-violet-600 hover:bg-violet-700 text-white font-medium py-3 px-8 rounded-lg shadow-md transition-colors transform hover:scale-105 duration-200"
         >
           👉 Garanta seu ingresso agora
         </a>

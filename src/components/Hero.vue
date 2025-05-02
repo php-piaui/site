@@ -1,7 +1,7 @@
 <script setup></script>
 
 <template>
-  <section class="gradient-bg bg-indigo-900 text-white py-16 md:py-24">
+  <section class="gradient-bg bg-violet-800 text-white py-16 md:py-24">
     <div class="container mx-auto px-4">
       <div class="flex flex-col md:flex-row items-center justify-between">
         <div class="md:w-1/2 mb-8 md:mb-0" data-aos="fade-right">
@@ -9,17 +9,17 @@
           <h2 class="text-xl md:text-2xl font-semibold mb-6">O maior evento de PHP do Nordeste</h2>
           <div class="mb-8">
             <div class="flex items-start mb-3">
-              <i class="fas fa-map-marker-alt mt-1 mr-3 text-indigo-300"></i>
+              <i class="fas fa-map-marker-alt mt-1 mr-3 text-violet-300"></i>
               <p>UESPI - Av. Nossa Sra. de Fátima, s/n - Parnaíba/PI</p>
             </div>
             <div class="flex items-start">
-              <i class="fas fa-calendar-alt mt-1 mr-3 text-indigo-300"></i>
+              <i class="fas fa-calendar-alt mt-1 mr-3 text-violet-300"></i>
               <p>Em breve</p>
             </div>
           </div>
           <a
             href="#register"
-            class="inline-block bg-white text-indigo-700 font-bold py-3 px-8 rounded-lg shadow-lg hover:bg-gray-100 transition-colors transform hover:scale-105 duration-200"
+            class="inline-block bg-white text-violet-700 font-bold py-3 px-8 rounded-lg shadow-lg hover:bg-gray-100 transition-colors transform hover:scale-105 duration-200"
           >
             👉 Inscreva-se agora
           </a>
@@ -38,7 +38,7 @@
             </svg>
             <div class="absolute inset-0 flex items-center justify-center">
               <span
-                class="text-4xl md:text-6xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-indigo-400 to-purple-300"
+                class="text-4xl md:text-6xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-violet-400 to-violet-300"
                 >2025</span
               >
             </div>

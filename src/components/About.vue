@@ -5,13 +5,13 @@
     <div class="container mx-auto px-4">
       <div class="text-center mb-12">
         <h2 class="text-3xl md:text-4xl font-bold mb-4 text-gray-900">Sobre o Evento</h2>
-        <div class="w-24 h-1 bg-indigo-600 mx-auto mb-6"></div>
+        <div class="w-24 h-1 bg-violet-600 mx-auto mb-6"></div>
       </div>
 
       <div class="flex flex-col md:flex-row items-center">
         <div class="md:w-1/2 mb-8 md:mb-0" data-aos="fade-right">
           <p class="text-lg text-gray-700 mb-6">
-            O <span class="font-semibold text-indigo-600">PHPeste</span> é o maior evento de PHP do
+            O <span class="font-semibold text-violet-600">PHPeste</span> é o maior evento de PHP do
             Nordeste, reunindo desenvolvedores, empresas e entusiastas para compartilhar
             conhecimento, experiências e as mais recentes tendências no ecossistema PHP.
           </p>
@@ -34,9 +34,9 @@
             <div class="space-y-4">
               <div class="flex items-center">
                 <div
-                  class="w-10 h-10 rounded-full bg-indigo-100 flex items-center justify-center mr-4"
+                  class="w-10 h-10 rounded-full bg-violet-100 flex items-center justify-center mr-4"
                 >
-                  <i class="fas fa-users text-indigo-600"></i>
+                  <i class="fas fa-users text-violet-600"></i>
                 </div>
                 <div>
                   <h4 class="font-medium text-gray-900">Capacidade Total</h4>
@@ -46,9 +46,9 @@
 
               <div class="flex items-center">
                 <div
-                  class="w-10 h-10 rounded-full bg-indigo-100 flex items-center justify-center mr-4"
+                  class="w-10 h-10 rounded-full bg-violet-100 flex items-center justify-center mr-4"
                 >
-                  <i class="fas fa-ticket-alt text-indigo-600"></i>
+                  <i class="fas fa-ticket-alt text-violet-600"></i>
                 </div>
                 <div>
                   <h4 class="font-medium text-gray-900">Preço Base</h4>
@@ -66,9 +66,9 @@
 
               <div class="flex items-center mt-18">
                 <div
-                  class="w-10 h-10 rounded-full bg-indigo-100 flex items-center justify-center mr-4"
+                  class="w-10 h-10 rounded-full bg-violet-100 flex items-center justify-center mr-4"
                 >
-                  <i class="fas fa-map-marked-alt text-indigo-600"></i>
+                  <i class="fas fa-map-marked-alt text-violet-600"></i>
                 </div>
                 <div>
                   <h4 class="font-medium text-gray-900">Local</h4>

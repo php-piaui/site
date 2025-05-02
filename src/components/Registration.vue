@@ -5,7 +5,7 @@
     <div class="container mx-auto px-4">
       <div class="text-center mb-12">
         <h2 class="text-3xl md:text-4xl font-bold mb-4 text-gray-900">Inscreva-se Agora</h2>
-        <div class="w-24 h-1 bg-indigo-600 mx-auto mb-6"></div>
+        <div class="w-24 h-1 bg-violet-600 mx-auto mb-6"></div>
         <p class="text-lg text-gray-700 max-w-2xl mx-auto">
           Garanta sua vaga no PHPeste 2025 e faça parte da comunidade PHP do Nordeste.
         </p>
@@ -25,7 +25,7 @@
             <input
               type="text"
               id="name"
-              class="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-indigo-600 focus:border-transparent"
+              class="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-violet-600 focus:border-transparent"
             />
           </div>
 
@@ -34,7 +34,7 @@
             <input
               type="email"
               id="email"
-              class="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-indigo-600 focus:border-transparent"
+              class="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-violet-600 focus:border-transparent"
             />
           </div>
 
@@ -44,7 +44,7 @@
             >
             <select
               id="ticket"
-              class="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-indigo-600 focus:border-transparent"
+              class="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-violet-600 focus:border-transparent"
             >
               <option value="">Selecione o tipo de ingresso</option>
               <option value="half">Meia-entrada</option>
@@ -57,7 +57,7 @@
             <label class="flex items-center">
               <input
                 type="checkbox"
-                class="h-4 w-4 text-indigo-600 focus:ring-indigo-500 border-gray-300 rounded"
+                class="h-4 w-4 text-violet-600 focus:ring-violet-500 border-gray-300 rounded"
               />
               <span class="ml-2 text-sm text-gray-700">Adicionar camisa do evento</span>
             </label>
@@ -67,7 +67,7 @@
             <label class="flex items-center">
               <input
                 type="checkbox"
-                class="h-4 w-4 text-indigo-600 focus:ring-indigo-500 border-gray-300 rounded"
+                class="h-4 w-4 text-violet-600 focus:ring-violet-500 border-gray-300 rounded"
               />
               <span class="ml-2 text-sm text-gray-700">Concordo com os termos e condições</span>
             </label>
@@ -75,7 +75,7 @@
 
           <button
             type="submit"
-            class="w-full bg-indigo-600 hover:bg-indigo-700 text-white font-medium py-2 px-4 rounded-md transition-colors"
+            class="w-full bg-violet-600 hover:bg-violet-700 text-white font-medium py-2 px-4 rounded-md transition-colors"
           >
             Finalizar Inscrição
           </button>

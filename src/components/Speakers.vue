@@ -5,7 +5,7 @@
     <div class="container mx-auto px-4">
       <div class="text-center mb-12">
         <h2 class="text-3xl md:text-4xl font-bold mb-4 text-gray-900">Palestrantes</h2>
-        <div class="w-24 h-1 bg-indigo-600 mx-auto mb-6"></div>
+        <div class="w-24 h-1 bg-violet-600 mx-auto mb-6"></div>
         <p class="text-lg text-gray-700 max-w-2xl mx-auto">
           Conheça os especialistas que compartilharão conhecimento no PHPeste 2025.
         </p>
@@ -20,8 +20,8 @@
         >
           <div class="p-6">
             <div class="flex items-center justify-center mb-4">
-              <div class="w-24 h-24 rounded-full bg-indigo-100 flex items-center justify-center">
-                <span class="text-3xl text-indigo-600">MC</span>
+              <div class="w-24 h-24 rounded-full bg-violet-100 flex items-center justify-center">
+                <span class="text-3xl text-violet-600">MC</span>
               </div>
             </div>
             <h3 class="text-xl font-bold text-center text-gray-900 mb-2">Monica Craveiro</h3>
@@ -45,8 +45,8 @@
         >
           <div class="p-6">
             <div class="flex items-center justify-center mb-4">
-              <div class="w-24 h-24 rounded-full bg-indigo-100 flex items-center justify-center">
-                <span class="text-3xl text-indigo-600">GW</span>
+              <div class="w-24 h-24 rounded-full bg-violet-100 flex items-center justify-center">
+                <span class="text-3xl text-violet-600">GW</span>
               </div>
             </div>
             <h3 class="text-xl font-bold text-center text-gray-900 mb-2">Gustavo Web</h3>
@@ -70,8 +70,8 @@
         >
           <div class="p-6">
             <div class="flex items-center justify-center mb-4">
-              <div class="w-24 h-24 rounded-full bg-indigo-100 flex items-center justify-center">
-                <span class="text-3xl text-indigo-600">P</span>
+              <div class="w-24 h-24 rounded-full bg-violet-100 flex items-center justify-center">
+                <span class="text-3xl text-violet-600">P</span>
               </div>
             </div>
             <h3 class="text-xl font-bold text-center text-gray-900 mb-2">Porã</h3>
