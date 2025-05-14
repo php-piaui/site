@@ -20,25 +20,25 @@
         >
           <div class="bg-violet-600 text-white py-4 px-6">
             <h3 class="text-xl font-bold">Lote Especial (PI)</h3>
-            <p class="text-violet-200">15/04 até 15/05</p>
+            <p class="text-violet-200">À definir</p>
           </div>
           <div class="p-6">
             <div class="mb-6">
               <div class="flex justify-between items-center mb-2">
                 <span class="text-gray-700">Meia-entrada</span>
-                <span class="font-bold text-gray-900">R$ 40,00</span>
+                <span class="font-bold text-gray-900">R$ --,--</span>
               </div>
               <div class="flex justify-between items-center mb-2">
                 <span class="text-gray-700">Entrada Solidária</span>
-                <span class="font-bold text-gray-900">R$ 50,00</span>
+                <span class="font-bold text-gray-900">R$ --,--</span>
               </div>
               <div class="flex justify-between items-center mb-2">
                 <span class="text-gray-700">Inteira</span>
-                <span class="font-bold text-gray-900">R$ 80,00</span>
+                <span class="font-bold text-gray-900">R$ --,--</span>
               </div>
               <div class="flex justify-between items-center">
                 <span class="text-gray-700">Com Camisa</span>
-                <span class="font-bold text-gray-900">+R$ 30,00</span>
+                <span class="font-bold text-gray-900">+R$ --,--</span>
               </div>
             </div>
             <div class="pt-4 border-t border-gray-200">
@@ -58,25 +58,25 @@
         >
           <div class="bg-violet-500 text-white py-4 px-6">
             <h3 class="text-xl font-bold">Primeiro Lote</h3>
-            <p class="text-violet-200">16/05 até 16/06</p>
+            <p class="text-violet-200">À definir</p>
           </div>
           <div class="p-6">
             <div class="mb-6">
               <div class="flex justify-between items-center mb-2">
                 <span class="text-gray-700">Meia-entrada</span>
-                <span class="font-bold text-gray-900">R$ 50,00</span>
+                <span class="font-bold text-gray-900">R$ --,--</span>
               </div>
               <div class="flex justify-between items-center mb-2">
                 <span class="text-gray-700">Entrada Solidária</span>
-                <span class="font-bold text-gray-900">R$ 60,00</span>
+                <span class="font-bold text-gray-900">R$ --,--</span>
               </div>
               <div class="flex justify-between items-center mb-2">
                 <span class="text-gray-700">Inteira</span>
-                <span class="font-bold text-gray-900">R$ 100,00</span>
+                <span class="font-bold text-gray-900">R$ --,--</span>
               </div>
               <div class="flex justify-between items-center">
                 <span class="text-gray-700">Com Camisa</span>
-                <span class="font-bold text-gray-900">+R$ 30,00</span>
+                <span class="font-bold text-gray-900">+R$ --,--</span>
               </div>
             </div>
             <div class="pt-4 border-t border-gray-200">
@@ -96,25 +96,25 @@
         >
           <div class="bg-violet-500 text-white py-4 px-6">
             <h3 class="text-xl font-bold">Segundo Lote</h3>
-            <p class="text-violet-200">17/06 até 31/08</p>
+            <p class="text-violet-200">À definir</p>
           </div>
           <div class="p-6">
             <div class="mb-6">
               <div class="flex justify-between items-center mb-2">
                 <span class="text-gray-700">Meia-entrada</span>
-                <span class="font-bold text-gray-900">R$ 60,00</span>
+                <span class="font-bold text-gray-900">R$ --,--</span>
               </div>
               <div class="flex justify-between items-center mb-2">
                 <span class="text-gray-700">Entrada Solidária</span>
-                <span class="font-bold text-gray-900">R$ 70,00</span>
+                <span class="font-bold text-gray-900">R$ --,--</span>
               </div>
               <div class="flex justify-between items-center mb-2">
                 <span class="text-gray-700">Inteira</span>
-                <span class="font-bold text-gray-900">R$ 120,00</span>
+                <span class="font-bold text-gray-900">R$ --,--</span>
               </div>
               <div class="flex justify-between items-center">
                 <span class="text-gray-700">Com Camisa</span>
-                <span class="font-bold text-gray-900">+R$ 35,00</span>
+                <span class="font-bold text-gray-900">+R$ --,--</span>
               </div>
             </div>
             <div class="pt-4 border-t border-gray-200">
@@ -134,25 +134,25 @@
         >
           <div class="bg-violet-500 text-white py-4 px-6">
             <h3 class="text-xl font-bold">Terceiro Lote</h3>
-            <p class="text-violet-200">01/09 até 31/09</p>
+            <p class="text-violet-200">À definir</p>
           </div>
           <div class="p-6">
             <div class="mb-6">
               <div class="flex justify-between items-center mb-2">
                 <span class="text-gray-700">Meia-entrada</span>
-                <span class="font-bold text-gray-900">R$ 70,00</span>
+                <span class="font-bold text-gray-900">R$ --,--</span>
               </div>
               <div class="flex justify-between items-center mb-2">
                 <span class="text-gray-700">Entrada Solidária</span>
-                <span class="font-bold text-gray-900">R$ 80,00</span>
+                <span class="font-bold text-gray-900">R$ --,--</span>
               </div>
               <div class="flex justify-between items-center mb-2">
                 <span class="text-gray-700">Inteira</span>
-                <span class="font-bold text-gray-900">R$ 140,00</span>
+                <span class="font-bold text-gray-900">R$ --,--</span>
               </div>
               <div class="flex justify-between items-center">
                 <span class="text-gray-700">Com Camisa</span>
-                <span class="font-bold text-gray-900">+R$ 40,00</span>
+                <span class="font-bold text-gray-900">+R$ --,--</span>
               </div>
             </div>
             <div class="pt-4 border-t border-gray-200">

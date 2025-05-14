@@ -1,4 +1,10 @@
-<script setup></script>
+<script setup>
+const showAlert = (e) => {
+  e.preventDefault()
+
+  alert('As inscrições serão abertas em breve!')
+}
+</script>
 
 <template>
   <section id="register" class="py-16 bg-white transition-colors">
@@ -12,12 +18,12 @@
       </div>
 
       <div class="max-w-lg mx-auto bg-gray-100 rounded-lg shadow-lg overflow-hidden">
-        <div class="gradient-bg text-white p-6 text-center">
+        <!-- <div class="gradient-bg text-primary p-6 text-center">
           <h3 class="text-2xl font-bold mb-2">Formulário de Inscrição</h3>
           <p>Preencha seus dados para garantir sua vaga</p>
-        </div>
+        </div> -->
 
-        <form class="p-6 space-y-4">
+        <!-- <form class="p-6 space-y-4">
           <div>
             <label for="name" class="block text-sm font-medium text-gray-700 mb-1"
               >Nome Completo</label
@@ -75,11 +81,20 @@
 
           <button
             type="submit"
+            @click="showAlert"
             class="w-full bg-violet-600 hover:bg-violet-700 text-white font-medium py-2 px-4 rounded-md transition-colors"
           >
             Finalizar Inscrição
           </button>
-        </form>
+        </form> -->
+
+        <button
+          type="submit"
+          @click="showAlert"
+          class="w-full bg-violet-600 hover:bg-violet-700 hover:cursor-pointer text-white font-medium py-2 px-4 rounded-md transition-colors"
+        >
+          Realizar Inscrição
+        </button>
       </div>
     </div>
   </section>

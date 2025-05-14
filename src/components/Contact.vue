@@ -12,7 +12,7 @@
       </div>
 
       <div class="flex flex-col md:flex-row md:space-x-8">
-        <div class="md:w-1/2 mb-8 md:mb-0">
+        <!-- <div class="md:w-1/2 mb-8 md:mb-0">
           <form class="bg-white rounded-lg shadow-md p-6 space-y-4">
             <div>
               <label for="contact-name" class="block text-sm font-medium text-gray-700 mb-1"
@@ -65,9 +65,9 @@
               Enviar Mensagem
             </button>
           </form>
-        </div>
+        </div> -->
 
-        <div class="md:w-1/2">
+        <div class="w-full">
           <div class="bg-white rounded-lg shadow-md p-6 h-full">
             <h3 class="text-xl font-bold text-gray-900 mb-6">Informações de Contato</h3>
 
@@ -80,7 +80,7 @@
                 </div>
                 <div>
                   <h4 class="font-medium text-gray-900">E-mail</h4>
-                  <p class="text-gray-700">contato@phpeste.net</p>
+                  <p class="text-gray-700">phppiaui@gmail.com</p>
                 </div>
               </div>
 
@@ -106,13 +106,15 @@
                   <h4 class="font-medium text-gray-900">Redes Sociais</h4>
                   <div class="flex space-x-4 mt-2">
                     <a href="#" class="text-violet-600 hover:text-violet-800 transition-colors">
-                      <i class="fab fa-twitter text-xl"></i>
-                    </a>
-                    <a href="#" class="text-violet-600 hover:text-violet-800 transition-colors">
                       <i class="fab fa-facebook text-xl"></i>
                     </a>
-                    <a href="#" class="text-violet-600 hover:text-violet-800 transition-colors">
+                    <a href="https://chat.whatsapp.com/GKlSwf1hqw5DwNqxM9YydU" target="_blank" class="text-violet-600 hover:text-violet-800 transition-colors">
+                      <i class="fab fa-twitter text-xl"></i>
+                      WhatsApp
+                    </a>
+                    <a href="https://www.instagram.com/php.piaui/" target="_blank" class="text-violet-600 hover:text-violet-800 transition-colors">
                       <i class="fab fa-instagram text-xl"></i>
+                      Instagram
                     </a>
                     <a href="#" class="text-violet-600 hover:text-violet-800 transition-colors">
                       <i class="fab fa-github text-xl"></i>

@@ -10,7 +10,7 @@ const mobileMenuOpen = ref(false)
     <div class="container mx-auto px-4 py-3">
       <div class="flex justify-between items-center">
         <a href="#" class="font-bold text-2xl text-violet-600">
-          <span class="text-violet-800">PHP</span>este
+          <span class="text-violet-900">PHP</span>este
         </a>
 
         <div class="flex items-center space-x-4">
