@@ -10,7 +10,7 @@ const eventInfo = ref([
   {
     icon: 'ticket-alt',
     title: 'Preço Base',
-    content: 'à definir',
+    content: 'R$ 150,00',
   },
   {
     icon: 'calendar-alt',

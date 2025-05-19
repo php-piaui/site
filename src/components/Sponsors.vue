@@ -69,7 +69,9 @@
           e conheça nossos planos de patrocínio.
         </p>
         <a
-          href="#contact"
+          href="https://wa.me/5586999692453 "
+          target="_blank"
+          rel="noopener noreferrer"
           class="inline-block bg-violet-600 hover:bg-violet-700 text-white font-medium py-2 px-6 rounded-lg shadow-md transition-colors"
         >
           Quero ser patrocinador

@@ -2,7 +2,8 @@
 const showAlert = (e) => {
   e.preventDefault()
 
-  alert('As inscrições serão abertas em breve!')
+  console.log('Botão clicado - redirecionando...')
+  window.location.href = 'https://eventiza.com.br/evento/phpeste-2025 '
 }
 </script>
 
