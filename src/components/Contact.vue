@@ -67,8 +67,8 @@
           </form>
         </div> -->
 
-        <div class="w-full">
-          <div class="bg-white rounded-lg shadow-md p-6 h-full">
+        <div class="w-full flex justify-center">
+          <div class="bg-white rounded-lg shadow-md p-6 h-full w-full">
             <h3 class="text-xl font-bold text-gray-900 mb-6">Informações de Contato</h3>
 
             <div class="space-y-6">
@@ -96,33 +96,39 @@
                 </div>
               </div>
 
-              <div class="flex items-start">
-                <div
-                  class="w-10 h-10 rounded-full bg-violet-100 flex items-center justify-center mr-4"
-                >
-                  <i class="fas fa-share-alt text-violet-600"></i>
-                </div>
-                <div>
-                  <h4 class="font-medium text-gray-900">Redes Sociais</h4>
-                  <div class="flex space-x-4 mt-2">
-                    <a href="#" class="text-violet-600 hover:text-violet-800 transition-colors">
-                      <i class="fab fa-facebook text-xl"></i>
-                    </a>
-                    <a href="https://chat.whatsapp.com/GKlSwf1hqw5DwNqxM9YydU" target="_blank" class="text-violet-600 hover:text-violet-800 transition-colors">
-                      <i class="fab fa-twitter text-xl"></i>
-                      WhatsApp
-                    </a>
-                    <a href="https://www.instagram.com/php.piaui/" target="_blank" class="text-violet-600 hover:text-violet-800 transition-colors">
-                      <i class="fab fa-instagram text-xl"></i>
-                      Instagram
-                    </a>
-                    <a href="#" class="text-violet-600 hover:text-violet-800 transition-colors">
-                      <i class="fab fa-github text-xl"></i>
-                    </a>
-                  </div>
+              <div class="flex flex-col items-center justify-end">
+                <div class="flex space-x-4 mt-44">
+                  <a
+                    href="https://chat.whatsapp.com/GKlSwf1hqw5DwNqxM9YydU"
+                    target="_blank"
+                    class="text-violet-600 hover:text-violet-800 transition-colors"
+                  >
+                    <i class="fab fa-whatsapp text-xl"></i>
+                    WhatsApp
+                  </a>
+                  <a
+                    href="https://www.instagram.com/php.piaui/"
+                    target="_blank"
+                    class="text-violet-600 hover:text-violet-800 transition-colors"
+                  >
+                    <i class="fab fa-instagram text-xl"></i>
+                    Instagram
+                  </a>
                 </div>
               </div>
             </div>
+          </div>
+          <div class="w-full">
+            <!-- <iframe
+              width="683"
+              height="460"
+              frameborder="0"
+              scrolling="no"
+              marginheight="0"
+              marginwidth="0"
+              id="gmap_canvas"
+              src="https://maps.google.com/maps?width=683&amp;height=460&amp;hl=en&amp;q=Uespi%20Parna%C3%ADba+(UESPI)&amp;t=&amp;z=15&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"
+            ></iframe> -->
           </div>
         </div>
       </div>

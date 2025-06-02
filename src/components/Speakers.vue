@@ -21,18 +21,69 @@
           <div class="p-6">
             <div class="flex items-center justify-center mb-4">
               <div class="w-24 h-24 rounded-full bg-violet-100 flex items-center justify-center">
-                <span class="text-3xl text-violet-600">MC</span>
+                <img class="w-24 h-24 rounded-full" src="/images/monica_craveiro.jpeg" alt="" />
+                <!-- <span class="text-3xl text-violet-600">MC</span> -->
               </div>
             </div>
             <h3 class="text-xl font-bold text-center text-gray-900 mb-2">Monica Craveiro</h3>
             <div class="flex justify-center">
               <span
-                class="inline-block bg-green-100 text-green-800 dark:text-green-200 text-xs font-semibold px-2 py-1 rounded-full"
+                class="inline-block bg-green-700 text-green-800 dark:text-green-200 text-xs font-semibold px-2 py-1 rounded-full"
                 >Confirmada</span
               >
             </div>
             <p class="text-center text-gray-600 mt-4">
-              Especialista em PHP e Arquitetura de Software
+              <!-- Especialista em PHP e Arquitetura de Software -->
+            </p>
+          </div>
+        </div>
+        
+        <!-- Vitor Mattos -->
+        <div
+          class="bg-white rounded-lg shadow-md overflow-hidden transition-transform transform hover:scale-105 duration-300"
+          data-aos="fade-up"
+          data-aos-delay="100"
+        >
+          <div class="p-6">
+            <div class="flex items-center justify-center mb-4">
+              <div class="w-24 h-24 rounded-full bg-violet-100 flex items-center justify-center">
+                <img class="w-24 h-24 rounded-full" src="/images/vitor_mattos.jpg" alt="" />
+              </div>
+            </div>
+            <h3 class="text-xl font-bold text-center text-gray-900 mb-2">Vitor Mattos</h3>
+            <div class="flex justify-center">
+              <span
+                class="inline-block bg-green-700 text-green-800 dark:text-green-200 text-xs font-semibold px-2 py-1 rounded-full"
+                >Confirmada</span
+              >
+            </div>
+            <p class="text-center text-gray-600 mt-4">
+              <!-- Especialista em PHP e Arquitetura de Software -->
+            </p>
+          </div>
+        </div>
+        
+        <!-- Ricardo Coelho -->
+        <div
+          class="bg-white rounded-lg shadow-md overflow-hidden transition-transform transform hover:scale-105 duration-300"
+          data-aos="fade-up"
+          data-aos-delay="100"
+        >
+          <div class="p-6">
+            <div class="flex items-center justify-center mb-4">
+              <div class="w-24 h-24 rounded-full bg-violet-100 flex items-center justify-center">
+                <img class="w-24 h-24 rounded-full" src="/images/ricardo_coelho.jpg" alt="" />
+              </div>
+            </div>
+            <h3 class="text-xl font-bold text-center text-gray-900 mb-2">Ricardo Coelho</h3>
+            <div class="flex justify-center">
+              <span
+                class="inline-block bg-green-700 text-green-800 dark:text-green-200 text-xs font-semibold px-2 py-1 rounded-full"
+                >Confirmada</span
+              >
+            </div>
+            <p class="text-center text-gray-600 mt-4">
+              <!-- Especialista em PHP e Arquitetura de Software -->
             </p>
           </div>
         </div>
@@ -46,18 +97,18 @@
           <div class="p-6">
             <div class="flex items-center justify-center mb-4">
               <div class="w-24 h-24 rounded-full bg-violet-100 flex items-center justify-center">
-                <span class="text-3xl text-violet-600">GW</span>
+                <img class="w-24 h-24 rounded-full" src="/images/gustavo_web.jpg" alt="" />
               </div>
             </div>
             <h3 class="text-xl font-bold text-center text-gray-900 mb-2">Gustavo Web</h3>
             <div class="flex justify-center">
               <span
-                class="inline-block bg-green-100 text-green-800 dark:text-green-200 text-xs font-semibold px-2 py-1 rounded-full"
+                class="inline-block bg-green-700 text-green-800 dark:text-green-200 text-xs font-semibold px-2 py-1 rounded-full"
                 >Confirmado</span
               >
             </div>
             <p class="text-center text-gray-600 mt-4">
-              Especialista em PHP, Laravel e Microsserviços
+              <!-- Especialista em PHP, Laravel e Microsserviços -->
             </p>
           </div>
         </div>
@@ -71,17 +122,19 @@
           <div class="p-6">
             <div class="flex items-center justify-center mb-4">
               <div class="w-24 h-24 rounded-full bg-violet-100 flex items-center justify-center">
-                <span class="text-3xl text-violet-600">P</span>
+                <img class="w-24 h-24 rounded-full" src="/images/uira_pora.jpg" alt="" />
               </div>
             </div>
-            <h3 class="text-xl font-bold text-center text-gray-900 mb-2">Porã</h3>
+            <h3 class="text-xl font-bold text-center text-gray-900 mb-2">Uirá Porã</h3>
             <div class="flex justify-center">
               <span
-                class="inline-block bg-green-100 text-green-800 dark:text-green-200 text-xs font-semibold px-2 py-1 rounded-full"
+                class="inline-block bg-green-700 text-green-800 dark:text-green-200 text-xs font-semibold px-2 py-1 rounded-full"
                 >Confirmado</span
               >
             </div>
-            <p class="text-center text-gray-600 mt-4">Especialista em Segurança e PHP Moderno</p>
+            <p class="text-center text-gray-600 mt-4">
+              <!-- Especialista em Segurança e PHP Moderno -->
+            </p>
           </div>
         </div>
       </div>
