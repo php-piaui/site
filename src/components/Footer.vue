@@ -1,42 +1,72 @@
-<script setup></script>
+<script setup>
+const year = new Date().getFullYear()
+</script>
 
 <template>
-  <footer class="bg-gray-900 text-white py-8">
-    <div class="container mx-auto px-4">
-      <div class="flex flex-col md:flex-row justify-between items-center">
-        <div class="mb-6 md:mb-0">
-          <a href="#" class="font-bold text-2xl text-violet-400">
-            <span class="text-violet-300">PHP</span>este 2025
-          </a>
-          <p class="mt-2 text-gray-400">O maior evento de PHP do Nordeste</p>
+  <!-- Footer -->
+  <footer class="bg-gray-900 text-white py-12">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid md:grid-cols-4 gap-8">
+        <div class="col-span-2">
+          <div class="flex items-center space-x-3 mb-4">
+            <div
+              class="w-10 h-10 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg flex items-center justify-center"
+            >
+              <span class="text-white font-bold text-lg">P</span>
+            </div>
+            <div>
+              <h3 class="text-xl font-bold">PHPeste 2025</h3>
+              <p class="text-gray-400">Parnaíba, Piauí</p>
+            </div>
+          </div>
+          <p class="text-gray-400 mb-4">
+            O maior evento de PHP do Nordeste. Conectando desenvolvedores, compartilhando
+            conhecimento e construindo o futuro da tecnologia.
+          </p>
         </div>
 
-        <div class="flex flex-col items-center md:items-end">
-          <div class="flex space-x-4 mb-4">
-            <a href="#" class="text-gray-400 hover:text-white transition-colors">
-              <i class="fab fa-twitter"></i>
-            </a>
-            <a href="#" class="text-gray-400 hover:text-white transition-colors">
-              <i class="fab fa-facebook"></i>
-            </a>
-            <a href="#" class="text-gray-400 hover:text-white transition-colors">
-              <i class="fab fa-instagram"></i>
-            </a>
-            <a href="#" class="text-gray-400 hover:text-white transition-colors">
-              <i class="fab fa-github"></i>
-            </a>
+        <div>
+          <h4 class="font-semibold mb-4">Links Úteis</h4>
+          <div class="space-y-2">
+            <!-- <a href="#" class="text-gray-400 hover:text-white transition-colors block"
+              >Código de Conduta</a
+            > -->
+            <a
+              href="https://wa.me/5586999692453"
+              target="_blank"
+              class="text-gray-400 hover:text-white transition-colors block"
+              >Patrocínio</a
+            >
+            <a
+              href="https://wa.me/5586999692453"
+              target="_blank"
+              class="text-gray-400 hover:text-white transition-colors block"
+              >Contato</a
+            >
           </div>
-          <p class="text-gray-400 text-sm">&copy; 2025 PHPeste. Todos os direitos reservados.</p>
+        </div>
+
+        <div>
+          <h4 class="font-semibold mb-4">Redes Sociais</h4>
+          <div class="space-y-2">
+            <a
+              href="https://www.instagram.com/phpeste/"
+              target="_blank"
+              class="text-gray-400 hover:text-white transition-colors block"
+              >Instagram</a
+            >
+            <a
+              href="https://www.linkedin.com/company/phpeste/about/"
+              target="_blank"
+              class="text-gray-400 hover:text-white transition-colors block"
+              >LinkedIn</a
+            >
+          </div>
         </div>
       </div>
 
-      <div class="mt-8 pt-6 border-t border-gray-800 text-center">
-        <a
-          href="#register"
-          class="inline-block bg-violet-600 hover:bg-violet-700 text-white font-medium py-2 px-6 rounded-md transition-colors"
-        >
-          👉 Inscreva-se agora
-        </a>
+      <div class="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
+        <p>&copy; {{ year }} PHPeste. Todos os direitos reservados.</p>
       </div>
     </div>
   </footer>

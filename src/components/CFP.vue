@@ -10,7 +10,6 @@ onMounted(() => {
   }, 100)
 })
 
-// URL do formulário externo (substitua pela URL real)
 const cfpFormUrl = 'https://forms.gle/ZDnYSbumfc6DpZU18'
 
 const handleCFPClick = () => {
@@ -97,6 +96,7 @@ const handleCFPClick = () => {
               <h4 class="text-lg font-semibold text-gray-800 mb-4">Temas que nos interessam:</h4>
               <div class="flex flex-wrap gap-2">
                 <span class="px-3 py-1.5 bg-white text-violet-700 rounded-full text-sm font-medium shadow-sm">Carreira</span>
+                <span class="px-3 py-1.5 bg-white text-violet-700 rounded-full text-sm font-medium shadow-sm">Desenvolvimento Pessoal</span>
                 <span class="px-3 py-1.5 bg-white text-violet-700 rounded-full text-sm font-medium shadow-sm">Frameworks</span>
                 <span class="px-3 py-1.5 bg-white text-violet-700 rounded-full text-sm font-medium shadow-sm">Clean Code</span>
                 <span class="px-3 py-1.5 bg-white text-violet-700 rounded-full text-sm font-medium shadow-sm">DevOps</span>
