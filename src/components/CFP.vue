@@ -10,6 +10,7 @@ onMounted(() => {
   }, 100)
 })
 
+// URL do formulário externo (substitua pela URL real)
 const cfpFormUrl = 'https://forms.gle/ZDnYSbumfc6DpZU18'
 
 const handleCFPClick = () => {
@@ -96,7 +97,6 @@ const handleCFPClick = () => {
               <h4 class="text-lg font-semibold text-gray-800 mb-4">Temas que nos interessam:</h4>
               <div class="flex flex-wrap gap-2">
                 <span class="px-3 py-1.5 bg-white text-violet-700 rounded-full text-sm font-medium shadow-sm">Carreira</span>
-                <span class="px-3 py-1.5 bg-white text-violet-700 rounded-full text-sm font-medium shadow-sm">Desenvolvimento Pessoal</span>
                 <span class="px-3 py-1.5 bg-white text-violet-700 rounded-full text-sm font-medium shadow-sm">Frameworks</span>
                 <span class="px-3 py-1.5 bg-white text-violet-700 rounded-full text-sm font-medium shadow-sm">Clean Code</span>
                 <span class="px-3 py-1.5 bg-white text-violet-700 rounded-full text-sm font-medium shadow-sm">DevOps</span>
@@ -138,7 +138,7 @@ const handleCFPClick = () => {
                     <svg class="w-4 h-4 text-violet-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
                     </svg>
-                    <span class="text-violet-100">Prazo: 11 de Agosto</span>
+                    <span class="text-violet-100">Prazo: 31 de Julho</span>
                   </div>
                   <div class="flex items-center gap-2">
                     <svg class="w-4 h-4 text-violet-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">

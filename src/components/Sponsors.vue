@@ -22,7 +22,7 @@
             <div
               class="w-32 h-32 mx-auto bg-gray-200 rounded-lg flex items-center justify-center mb-4"
             >
-              <span class="font-bold text-xl text-violet-600">Programe.io</span>
+              <span class="font-bold text-xl text-violet-600">PHPSP</span>
             </div>
             <h3 class="font-bold text-gray-900">Patrocinador Diamante</h3>
           </div>
@@ -38,7 +38,7 @@
             <div
               class="w-32 h-32 mx-auto bg-gray-200 rounded-lg flex items-center justify-center mb-4"
             >
-              <span class="font-bold text-xl text-violet-600">Alura</span>
+              <span class="font-bold text-xl text-violet-600"> </span>
             </div>
             <h3 class="font-bold text-gray-900">Patrocinador Ouro</h3>
           </div>
@@ -54,7 +54,7 @@
             <div
               class="w-32 h-32 mx-auto bg-gray-200 rounded-lg flex items-center justify-center mb-4"
             >
-              <span class="font-bold text-xl text-violet-600">UESPI</span>
+              <span class="font-bold text-xl text-violet-600">UESPI - Parnaíba</span>
             </div>
             <h3 class="font-bold text-gray-900">Apoio Institucional</h3>
           </div>
