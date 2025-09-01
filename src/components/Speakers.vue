@@ -18,7 +18,7 @@ const palestrantes = [
   { id: 15, estado: 'CE', nome: 'Henrique Lopes', imagem: 'https://media.licdn.com/dms/image/v2/D4D03AQFM61N-RQ4jpA/profile-displayphoto-shrink_800_800/B4DZPgF6XlGgAc-/0/1734631466964?e=1759363200&v=beta&t=Kl4jviSD88fnajRKTAbpbwgMtyfC8EFmkwCE7pN5sec', status: 'Confirmado' },
   { id: 16, estado: 'MA', nome: 'Helena Saminez', imagem: 'https://media.licdn.com/dms/image/v2/D4D03AQGh1j4yg_J8SA/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1718220121081?e=1759363200&v=beta&t=mJDlr1GK-kNCd4r-TXURw8b44IIlpBz14Si6MV73NjQ', status: 'Confirmado' },
   { id: 17, estado: 'CE', nome: 'David Lima', imagem: 'https://media.licdn.com/dms/image/v2/D4D03AQE6k60InxG5LA/profile-displayphoto-shrink_800_800/B4DZUPbwlUGcAc-/0/1739720690723?e=1759363200&v=beta&t=66IXBGPp5xXjVQaTodNN7wj-EHQ4dsjLuJgnp2mu0AY', status: 'Confirmado' },
-  { id: 18, estado: 'Canadá', nome: 'Joao Magalhaes', imagem: '/images/Joao_Magalhaes.jpg', status: 'Confirmado' },
+  { id: 18, estado: 'Canadá', nome: 'Joao Magalhaes', imagem: '/images/Joao_Magalhaes.jpeg', status: 'Confirmado' },
 ]
 </script>
 
