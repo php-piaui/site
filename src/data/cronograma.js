@@ -60,7 +60,7 @@ export const cronograma_dia1 = [
     data: '2025-10-03',
     horario_inicio: '10:45:00',
     horario_fim: '11:15:00',
-    speaker_img: '/images/speakers/nopic.png',
+    speaker_img: '/images/speakers/alinechavess.png',
     sala: 'Sala',
   },
   {
