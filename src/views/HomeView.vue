@@ -9,20 +9,24 @@ import Sponsors from '../components/Sponsors.vue'
 import Registration from '../components/Registration.vue'
 import Contact from '../components/Contact.vue'
 import Footer from '../components/Footer.vue'
+
+import { cronograma_dia1, cronograma_dia2 } from '../data/cronograma.js'
 </script>
 
 <template>
   <Header />
 
   <Hero />
-  
+
   <CFP />
 
   <About />
 
   <Tickets />
 
-  <Speakers />
+  <Speakers :cronograma="cronograma_dia1" event_day="Dia 03 de Outubro" />
+
+  <Speakers :cronograma="cronograma_dia2" event_day="Dia 04 de Outubro" />
 
   <Sponsors />
 

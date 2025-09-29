@@ -20,7 +20,7 @@ const mobileMenuOpen = ref(false)
               >Ingressos</a
             >
             <a href="/#speakers" class="text-gray-700 hover:text-violet-600 transition-colors"
-              >Palestrantes</a
+              >Cronograma</a
             >
             <a href="/#sponsors" class="text-gray-700 hover:text-violet-600 transition-colors"
               >Patrocinadores</a
