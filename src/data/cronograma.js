@@ -5,7 +5,7 @@ export const cronograma_dia1 = [
     data: '2025-10-03',
     horario_inicio: '08:35:00',
     horario_fim: '09:05:00',
-    speaker_img: '/public/images/speakers/ricardo_coelho.jpg',
+    speaker_img: '/images/speakers/ricardo_coelho.jpg',
     sala: 'Auditório',
   },
   {
@@ -15,7 +15,7 @@ export const cronograma_dia1 = [
     data: '2025-10-03',
     horario_inicio: '09:10:00',
     horario_fim: '09:40:00',
-    speaker_img: '/public/images/speakers/kauevictor.png',
+    speaker_img: '/images/speakers/kauevictor.png',
     sala: 'Auditório',
   },
   {
@@ -24,7 +24,7 @@ export const cronograma_dia1 = [
     data: '2025-10-03',
     horario_inicio: '09:10:00',
     horario_fim: '09:40:00',
-    speaker_img: '/public/images/speakers/marcelgsantos.jpeg',
+    speaker_img: '/images/speakers/marcelgsantos.jpeg',
     sala: 'Sala',
   },
   {
@@ -33,7 +33,7 @@ export const cronograma_dia1 = [
     data: '2025-10-03',
     horario_inicio: '09:45:00',
     horario_fim: '10:15:00',
-    speaker_img: '/public/images/speakers/Joao_Magalhaes.jpeg',
+    speaker_img: '/images/speakers/Joao_Magalhaes.jpeg',
     sala: 'Auditório',
   },
   {
@@ -42,7 +42,7 @@ export const cronograma_dia1 = [
     data: '2025-10-03',
     horario_inicio: '09:45:00',
     horario_fim: '10:15:00',
-    speaker_img: '/public/images/speakers/casimiroarruda.jpeg',
+    speaker_img: '/images/speakers/casimiroarruda.jpeg',
     sala: 'Sala',
   },
   {
@@ -51,7 +51,7 @@ export const cronograma_dia1 = [
     data: '2025-10-03',
     horario_inicio: '10:45:00',
     horario_fim: '11:15:00',
-    speaker_img: '/public/images/speakers/wildermartins.png',
+    speaker_img: '/images/speakers/wildermartins.png',
     sala: 'Auditório',
   },
   {
@@ -60,7 +60,7 @@ export const cronograma_dia1 = [
     data: '2025-10-03',
     horario_inicio: '10:45:00',
     horario_fim: '11:15:00',
-    speaker_img: '/public/images/speakers/nopic.png',
+    speaker_img: '/images/speakers/nopic.png',
     sala: 'Sala',
   },
   {
@@ -69,7 +69,7 @@ export const cronograma_dia1 = [
     data: '2025-10-03',
     horario_inicio: '11:20:00',
     horario_fim: '11:50:00',
-    speaker_img: '/public/images/speakers/AlessandroFeitoza.jpeg',
+    speaker_img: '/images/speakers/AlessandroFeitoza.jpeg',
     sala: 'Auditório',
   },
   {
@@ -78,7 +78,7 @@ export const cronograma_dia1 = [
     data: '2025-10-03',
     horario_inicio: '11:20:00',
     horario_fim: '11:50:00',
-    speaker_img: '/public/images/speakers/rcosta1246.jpeg',
+    speaker_img: '/images/speakers/rcosta1246.jpeg',
     sala: 'Sala',
   },
 ]
