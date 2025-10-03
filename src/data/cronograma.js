@@ -66,15 +66,6 @@ export const cronograma_dia1 = [
     sala: 'Auditório',
   },
   {
-    nome_palestrante: 'Aline Chaves',
-    titulo_palestra: 'Traduz aí, Dev! Como alinhar código e negócio sem precisar de legenda.',
-    data: '2025-10-03',
-    horario_inicio: '10:45:00',
-    horario_fim: '11:15:00',
-    speaker_img: '/images/speakers/alinechavess.png',
-    sala: 'Sala',
-  },
-  {
     nome_palestrante: 'Alessandro Feitoza',
     titulo_palestra:
       'Database Patterns - Por que não é só questão de usar, é saber o que tá usando',
@@ -103,31 +94,22 @@ export const cronograma_dia1 = [
     sala: 'Auditório',
   },
   {
-    nome_palestrante: 'Vitor Xavier Correia',
-    titulo_palestra:
-      'Integração Laravel + Vue com Inertia.js: Como migrar de um monólito Blade para uma SPA moderna sem reescrever tudo.',
-    data: '2025-10-03',
-    horario_inicio: '13:30:00',
-    horario_fim: '14:00:00',
-    speaker_img: '/images/speakers/vitorxaviercorreia.jpeg',
-    sala: 'Sala',
-  },
-  {
-    nome_palestrante: 'Sara Souza',
-    titulo_palestra: 'PHP + IA: Explorando o Futuro da Programação Inteligente',
-    data: '2025-10-03',
-    horario_inicio: '14:05:00',
-    horario_fim: '14:35:00',
-    speaker_img: '/images/speakers/sara-souza.jpeg',
-    sala: 'Auditório',
-  },
-  {
     nome_palestrante: 'Emerson da Silva Martins',
     titulo_palestra: 'PHP + IA: O Futuro do Backend Inteligente',
     data: '2025-10-03',
     horario_inicio: '14:05:00',
     horario_fim: '14:35:00',
     speaker_img: '/images/speakers/EmersonMartins.jpeg',
+    sala: 'Auditório',
+  },
+  {
+    nome_palestrante: 'Vitor Xavier Correia',
+    titulo_palestra:
+      'Integração Laravel + Vue com Inertia.js: Como migrar de um monólito Blade para uma SPA moderna sem reescrever tudo.',
+    data: '2025-10-03',
+    horario_inicio: '14:05:00',
+    horario_fim: '14:35:00',
+    speaker_img: '/images/speakers/vitorxaviercorreia.jpeg',
     sala: 'Sala',
   },
   {
@@ -346,15 +328,6 @@ export const cronograma_dia2 = [
     sala: 'Auditório',
   },
   {
-    nome_palestrante: 'Leandro Ferreira',
-    titulo_palestra: 'Vibe Coding: Fria ou Ladrão de Emprego?',
-    data: '2025-10-04',
-    horario_inicio: '13:30:00',
-    horario_fim: '14:00:00',
-    speaker_img: '/images/speakers/souleandro.jpeg',
-    sala: 'Sala',
-  },
-  {
     nome_palestrante: 'Henrique Lopes Lima',
     titulo_palestra: 'PHP do "paruano": Tudo que cê ainda não tá usando (Mas devia!)',
     data: '2025-10-04',
@@ -436,12 +409,12 @@ export const cronograma_dia2 = [
     sala: 'Auditório',
   },
   {
-    nome_palestrante: 'Durval Pereira',
-    titulo_palestra: 'Decisões não técnicas que escalam o profissional técnico',
+    nome_palestrante: 'Leandro Ferreira',
+    titulo_palestra: 'Vibe Coding: Fria ou Ladrão de Emprego?',
     data: '2025-10-04',
     horario_inicio: '17:25:00',
     horario_fim: '17:55:00',
-    speaker_img: '/images/speakers/durval_pereira.jpeg',
+    speaker_img: '/images/speakers/souleandro.jpeg',
     sala: 'Auditório',
   },
 ]
