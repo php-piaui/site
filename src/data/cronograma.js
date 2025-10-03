@@ -113,12 +113,12 @@ export const cronograma_dia1 = [
     sala: 'Sala',
   },
   {
-    nome_palestrante: 'Luiz Siqueira e Moises Falcão',
-    titulo_palestra: 'Entre Commits e Reuniões: A Vida Real Liderando Devs',
+    nome_palestrante: 'Monica Craveiro',
+    titulo_palestra: 'Do caos ao container: minha jornada além do “na minha máquina funciona”',
     data: '2025-10-03',
     horario_inicio: '14:40:00',
     horario_fim: '15:10:00',
-    speaker_img: '/images/speakers/luiz_e_moises.jpeg',
+    speaker_img: '/images/speakers/monica_craveiro.jpeg',
     sala: 'Auditório',
   },
   {
@@ -176,12 +176,12 @@ export const cronograma_dia1 = [
     sala: 'Sala',
   },
   {
-    nome_palestrante: 'Monica Craveiro',
-    titulo_palestra: 'Do caos ao container: minha jornada além do “na minha máquina funciona”',
+    nome_palestrante: 'Luiz Siqueira e Moises Falcão',
+    titulo_palestra: 'Entre Commits e Reuniões: A Vida Real Liderando Devs',
     data: '2025-10-03',
     horario_inicio: '16:50:00',
     horario_fim: '17:20:00',
-    speaker_img: '/images/speakers/monica_craveiro.jpeg',
+    speaker_img: '/images/speakers/luiz_e_moises.jpeg',
     sala: 'Auditório',
   },
   {
