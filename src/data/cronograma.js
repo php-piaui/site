@@ -300,15 +300,6 @@ export const cronograma_dia2 = [
     sala: 'Sala',
   },
   {
-    nome_palestrante: 'Antonio Moreira',
-    titulo_palestra: 'PHP além do foreach: pensando fora do array',
-    data: '2025-10-04',
-    horario_inicio: '11:20:00',
-    horario_fim: '11:50:00',
-    speaker_img: '/images/speakers/antoniomoreira.jpeg',
-    sala: 'Auditório',
-  },
-  {
     nome_palestrante: 'Breno Lima',
     titulo_palestra: 'Desenvolvendo seu primeiro app Nextcloud',
     data: '2025-10-04',
@@ -320,12 +311,21 @@ export const cronograma_dia2 = [
   {
     nome_palestrante: 'Fernando Braga',
     titulo_palestra:
-      'Faca no Pescoço: uma aliada para o crescimento profissional?',
+    'Faca no Pescoço: uma aliada para o crescimento profissional?',
     data: '2025-10-04',
     horario_inicio: '13:30:00',
     horario_fim: '14:00:00',
     speaker_img: '/images/speakers/fernandoabf.jpg',
     sala: 'Auditório',
+  },
+  {
+    nome_palestrante: 'Antonio Moreira',
+    titulo_palestra: 'PHP além do foreach: pensando fora do array',
+    data: '2025-10-04',
+    horario_inicio: '13:30:00',
+    horario_fim: '14:00:00',
+    speaker_img: '/images/speakers/antoniomoreira.jpeg',
+    sala: 'Sala',
   },
   {
     nome_palestrante: 'Henrique Lopes Lima',
