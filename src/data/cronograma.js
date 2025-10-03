@@ -175,15 +175,15 @@ export const cronograma_dia1 = [
     speaker_img: '/images/speakers/WellingtonSilva.jpeg',
     sala: 'Sala',
   },
-  {
-    nome_palestrante: 'Luiz Siqueira e Moises Falcão',
-    titulo_palestra: 'Entre Commits e Reuniões: A Vida Real Liderando Devs',
-    data: '2025-10-03',
-    horario_inicio: '16:50:00',
-    horario_fim: '17:20:00',
-    speaker_img: '/images/speakers/luiz_e_moises.jpeg',
-    sala: 'Auditório',
-  },
+  // {
+  //   nome_palestrante: 'Luiz Siqueira e Moises Falcão',
+  //   titulo_palestra: 'Entre Commits e Reuniões: A Vida Real Liderando Devs',
+  //   data: '2025-10-03',
+  //   horario_inicio: '16:50:00',
+  //   horario_fim: '17:20:00',
+  //   speaker_img: '/images/speakers/luiz_e_moises.jpeg',
+  //   sala: 'Auditório',
+  // },
   {
     nome_palestrante: 'Ígor Mendes',
     titulo_palestra: 'Como programar com Inteligência Artificial do jeito certo',
@@ -191,7 +191,7 @@ export const cronograma_dia1 = [
     horario_inicio: '16:50:00',
     horario_fim: '17:20:00',
     speaker_img: '/images/speakers/igormendesdev.jpeg',
-    sala: 'Sala',
+    sala: 'Auditório',
   },
   {
     nome_palestrante: 'Gustavo Web',
