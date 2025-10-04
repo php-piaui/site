@@ -215,16 +215,6 @@ export const cronograma_dia2 = [
     sala: 'Auditório',
   },
   {
-    nome_palestrante: 'Lucca Galeno Cordeiro',
-    titulo_palestra:
-      'Fuga de Cérebros na Tecnologia: Como Reter Talentos e Construir Carreiras Sustentáveis no Brasil',
-    data: '2025-10-04',
-    horario_inicio: '08:35:00',
-    horario_fim: '09:05:00',
-    speaker_img: '/images/speakers/lucca.png',
-    sala: 'Sala',
-  },
-  {
     nome_palestrante: 'José Everton',
     titulo_palestra: 'Filament: o atalho para CRUDs poderosos no Laravel',
     data: '2025-10-04',
@@ -398,6 +388,16 @@ export const cronograma_dia2 = [
     horario_fim: '16:45:00',
     speaker_img: '/images/speakers/willcorreia.png',
     sala: 'Auditório',
+  },
+  {
+    nome_palestrante: 'Lucca Galeno Cordeiro',
+    titulo_palestra:
+      'Fuga de Cérebros na Tecnologia: Como Reter Talentos e Construir Carreiras Sustentáveis no Brasil',
+    data: '2025-10-04',
+    horario_inicio: '16:15:00',
+    horario_fim: '16:45:00',
+    speaker_img: '/images/speakers/lucca.png',
+    sala: 'Sala',
   },
   {
     nome_palestrante: 'Alcimar Carlos de Lemos Vasconcelos e Aires',
