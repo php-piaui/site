@@ -11,6 +11,7 @@ export default defineConfig({
             fonts: [
                 bunny('Instrument Sans', {
                     weights: [400, 500, 600, 700],
+                    styles: ['normal', 'italic'],
                 }),
                 bunny('Bricolage Grotesque', {
                     weights: [500, 600, 700, 800],

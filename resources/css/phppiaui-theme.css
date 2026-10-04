@@ -64,7 +64,7 @@
   --shadow-md: 0 2px 4px rgb(27 27 61 / .06), 0 8px 20px rgb(27 27 61 / .08);
   --shadow-lg: 0 4px 8px rgb(27 27 61 / .08), 0 20px 40px rgb(27 27 61 / .14);
   --breakpoint-sm: 40rem; --breakpoint-md: 48rem; --breakpoint-lg: 64rem; --breakpoint-xl: 80rem;
-  --container-content: 75rem; --container-prose: 45rem; --container-narrow: 30rem;
+  --container-content: 75rem; --container-prose: 45rem; --container-form: 40rem; --container-narrow: 30rem;
   --ease-out: cubic-bezier(.2,.7,.2,1);
 }
 
