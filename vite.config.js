@@ -9,12 +9,9 @@ export default defineConfig({
             input: ['resources/css/app.css', 'resources/js/app.js'],
             refresh: true,
             fonts: [
-                bunny('Instrument Sans', {
-                    weights: [400, 500, 600, 700],
+                bunny('Poppins', {
+                    weights: [400, 500, 600, 700, 800],
                     styles: ['normal', 'italic'],
-                }),
-                bunny('Bricolage Grotesque', {
-                    weights: [500, 600, 700, 800],
                 }),
                 bunny('JetBrains Mono', {
                     weights: [400, 500, 700],

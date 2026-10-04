@@ -29,7 +29,7 @@
   --dur-fast:120ms;--dur-base:180ms;--dur-slow:280ms;
   --radius-full:9999px;
   --container-max:1200px;--gutter:16px;--gutter-md:24px;--touch-min:44px;--header-h:64px;
-  --font-body:'Instrument Sans',ui-sans-serif,system-ui,sans-serif;
+  --font-body:'Poppins',ui-sans-serif,system-ui,sans-serif;
   --tracking-snug:-0.01em;--tracking-caps:0.06em;
   --bg-page:var(--areia-50);--surface-inverse:var(--indigo-950);
   --status-review-fg:var(--warning-fg);--status-review-bg:var(--warning-bg);--status-review-border:var(--warning-border);
