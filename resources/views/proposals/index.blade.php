@@ -30,7 +30,7 @@
             @if ($loop->last)</ul>@endif
         @empty
             <x-empty-state icon="inbox" title="Você ainda não enviou nenhuma proposta">
-                Primeira vez? Uma lightning talk de 5 minutos é um ótimo começo — e o comitê ajuda a lapidar.
+                Primeira vez? Uma microtalk de 5 minutos é um ótimo começo — e o comitê ajuda a lapidar.
                 <x-slot:actions>
                     <x-button variant="cta" icon="send" :href="\App\Support\SiteContent::submitUrl()">Submeter proposta</x-button>
                     <x-button variant="ghost" :href="route('cfp.show')">Ver regras do CFP</x-button>

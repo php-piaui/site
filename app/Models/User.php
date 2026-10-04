@@ -23,6 +23,11 @@ class User extends Authenticatable
     use Notifiable;
 
     /**
+     * Pasta das fotos de perfil no disk s3; é a única com leitura pública (php artisan storage:bucket).
+     */
+    public const PHOTO_DIRECTORY = 'photos';
+
+    /**
      * Get the attributes that should be cast.
      *
      * @return array<string, string>
@@ -46,7 +51,7 @@ class User extends Authenticatable
 
     public function photoUrl(): ?string
     {
-        return $this->photo_path ? Storage::disk('public')->url($this->photo_path) : null;
+        return $this->photo_path ? Storage::disk('s3')->url($this->photo_path) : null;
     }
 
     /**

@@ -5,7 +5,7 @@
 @php
     $decided = (bool) $proposal?->isDecided();
     $heading = $decided ? $proposal->title : ($proposal ? 'Editar proposta' : 'Nova proposta');
-    $errorCount = count($errors->keys());
+        $errorCount = count(array_diff($errors->keys(), ['cfp']));
 @endphp
 
 <x-layouts.site :title="$heading" current="minhas">
@@ -31,6 +31,9 @@
             @else
                 <x-alert>Você pode editar a proposta enquanto ela estiver <b>em revisão</b>. Depois da decisão, ela fica somente leitura.</x-alert>
             @endif
+                        @error('cfp')
+                <x-alert tone="danger" title="Limite de propostas">{{ $message }}</x-alert>
+            @enderror
             @if ($errorCount)
                 <x-alert tone="danger" :title="$errorCount > 1 ? 'Faltam '.$errorCount.' campos' : 'Falta 1 campo'">Revise os campos destacados abaixo.</x-alert>
             @endif

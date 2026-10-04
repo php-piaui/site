@@ -32,6 +32,10 @@ class ProposalController extends Controller
             return redirect()->route('cfp.show')->with('status', 'Nenhum CFP aberto agora.');
         }
 
+        if (! $cfp->acceptsMoreProposalsFrom($user)) {
+            return redirect()->route('proposals.index')->with('status', 'Você já enviou '.Cfp::MAX_PROPOSALS_PER_SPEAKER.' propostas para este CFP, o limite por pessoa.');
+        }
+
         return view('proposals.form', ['proposal' => null, 'cfp' => $cfp, 'user' => $user]);
     }
 

@@ -71,7 +71,7 @@ A plataforma é o **endereço oficial da PHP Piauí** e tem quatro áreas:
 ### 2.3 Call for papers
 
 - A organização abre um CFP **vinculado a um evento**, com prazo de submissão
-  e formatos aceitos (ex.: palestra, lightning talk, workshop).
+  e formatos aceitos (ex.: palestra, microtalk, workshop).
 - A página pública do CFP mostra regras, prazo e formatos **sem exigir
   login**. Qualquer visitante pode ler antes de decidir submeter.
 - **Submeter exige estar logado, e o palestrante precisa entender por quê.**

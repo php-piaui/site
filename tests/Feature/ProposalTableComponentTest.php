@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 $proposals = [
     ['id' => 1, 'title' => 'Pest + Livewire sem sofrimento', 'speaker' => 'Ana Sousa', 'format' => 'palestra', 'sent_at' => '02/10/2026', 'status' => 'review', 'url' => '/p/1', 'approve_url' => '/p/1/approve', 'reject_url' => '/p/1/reject'],
-    ['id' => 2, 'title' => 'Meu primeiro pacote no Packagist', 'speaker' => 'João Nunes', 'format' => 'lightning', 'sent_at' => '01/10/2026', 'status' => 'approved', 'url' => '/p/2', 'approve_url' => '/p/2/approve', 'reject_url' => '/p/2/reject'],
+    ['id' => 2, 'title' => 'Meu primeiro pacote no Packagist', 'speaker' => 'João Nunes', 'format' => 'microtalk', 'sent_at' => '01/10/2026', 'status' => 'approved', 'url' => '/p/2', 'approve_url' => '/p/2/approve', 'reject_url' => '/p/2/reject'],
 ];
 
 test('auto layout renders table and stacked cards', function () use ($proposals) {
@@ -15,7 +15,7 @@ test('auto layout renders table and stacked cards', function () use ($proposals)
         ->assertSee('Pest + Livewire sem sofrimento')
         ->assertSee('Ana Sousa · 02/10/2026')
         ->assertSee('Em revisão')
-        ->assertSee('Lightning talk');
+        ->assertSee('Microtalk');
 });
 
 test('only proposals under review get approve and reject links', function () use ($proposals) {

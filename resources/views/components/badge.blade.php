@@ -18,7 +18,7 @@
         'online' => ['tone' => 'neutral', 'icon' => 'video', 'label' => 'Online'],
         'hibrido' => ['tone' => 'neutral', 'icon' => 'monitor-smartphone', 'label' => 'Híbrido'],
         'palestra' => ['tone' => 'outline', 'icon' => 'mic', 'label' => 'Palestra'],
-        'lightning' => ['tone' => 'outline', 'icon' => 'zap', 'label' => 'Lightning talk'],
+        'microtalk' => ['tone' => 'outline', 'icon' => 'zap', 'label' => 'Microtalk'],
         'workshop' => ['tone' => 'outline', 'icon' => 'wrench', 'label' => 'Workshop'],
         'review' => ['tone' => 'warning', 'icon' => 'hourglass', 'label' => 'Em revisão'],
         'approved' => ['tone' => 'success', 'icon' => 'circle-check', 'label' => 'Aprovada'],

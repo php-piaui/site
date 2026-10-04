@@ -10,14 +10,14 @@ namespace App\Enums;
 enum ProposalFormat: string
 {
     case Palestra  = 'palestra';
-    case Microtalk = 'lightning';
+    case Microtalk = 'microtalk';
     case Workshop  = 'workshop';
 
     public function label(): string
     {
         return match ($this) {
             self::Palestra  => 'Palestra',
-            self::Microtalk => 'Lightning talk',
+            self::Microtalk => 'Microtalk',
             self::Workshop  => 'Workshop',
         };
     }

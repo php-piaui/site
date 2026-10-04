@@ -92,3 +92,23 @@ test('hides other people proposals', function () use ($valid) {
     $this->actingAs($stranger)->get(route('proposals.show', $proposal))->assertForbidden();
     $this->actingAs($stranger)->put(route('proposals.update', $proposal), $valid())->assertForbidden();
 });
+
+test('limits each speaker to five proposals per cfp', function () use ($valid) {
+    $cfp  = Cfp::factory()->create();
+    $user = User::factory()->create();
+    Proposal::factory()->count(Cfp::MAX_PROPOSALS_PER_SPEAKER)->for($cfp)->for($user)->create();
+    Proposal::factory()->for($user)->create();
+
+    $this->actingAs($user)->get('/propostas/nova')->assertRedirect(route('proposals.index'));
+    $this->actingAs($user)->post('/propostas', $valid())->assertSessionHasErrors('cfp');
+
+    expect($cfp->proposals()->count())->toBe(Cfp::MAX_PROPOSALS_PER_SPEAKER);
+});
+
+test('lets a speaker edit a proposal even at the limit', function () use ($valid) {
+    $cfp       = Cfp::factory()->create();
+    $user      = User::factory()->create();
+    $proposals = Proposal::factory()->count(Cfp::MAX_PROPOSALS_PER_SPEAKER)->for($cfp)->for($user)->create();
+
+    $this->actingAs($user)->put(route('proposals.update', $proposals->first()), $valid(['title' => 'Ajustado']))->assertSessionHasNoErrors();
+});

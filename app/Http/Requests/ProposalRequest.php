@@ -10,6 +10,7 @@ use App\Models\Proposal;
 use Illuminate\Contracts\Validation\ValidationRule;
 use Illuminate\Foundation\Http\FormRequest;
 use Illuminate\Validation\Rule;
+use Illuminate\Validation\Validator;
 
 /**
  * Envio e edição de proposta. O formato precisa estar entre os aceitos pelo CFP.
@@ -51,6 +52,25 @@ class ProposalRequest extends FormRequest
             'summary.required' => 'Escreva pelo menos 80 caracteres. Conte o que a plateia vai aprender.',
             'summary.min'      => 'Escreva pelo menos 80 caracteres. Conte o que a plateia vai aprender.',
             'conduct.accepted' => 'É preciso concordar com o código de conduta.',
+        ];
+    }
+
+    /**
+     * Novas propostas respeitam o limite por pessoa em cada CFP.
+     *
+     * @return list<callable(Validator): void>
+     */
+    public function after(): array
+    {
+        return [
+            function (Validator $validator): void {
+                $cfp  = $this->cfp();
+                $user = $this->user();
+
+                if ($this->route('proposal') === null && $cfp && $user && ! $cfp->acceptsMoreProposalsFrom($user)) {
+                    $validator->errors()->add('cfp', 'Você já enviou '.Cfp::MAX_PROPOSALS_PER_SPEAKER.' propostas para este CFP, o limite por pessoa.');
+                }
+            },
         ];
     }
 

@@ -1,7 +1,7 @@
 {{--
     Lista de propostas do admin (components/admin/ProposalTable). Tabela ≥768px, cards empilhados abaixo.
     Aprovar/Recusar só enquanto status = review.
-    Cada proposta: id, title, speaker, format (palestra|lightning|workshop), sent_at ("02/10/2026"),
+    Cada proposta: id, title, speaker, format (palestra|microtalk|workshop), sent_at ("02/10/2026"),
     status (review|approved|rejected), url (Ver), approve_url e reject_url (links para a confirmação, ex.: x-confirm-dialog).
     layout: auto · table · cards
     Uso: <x-proposal-table :proposals="$proposals" />

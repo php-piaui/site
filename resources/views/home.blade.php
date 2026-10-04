@@ -48,7 +48,7 @@
             <ol class="grid grid-cols-[repeat(auto-fit,minmax(min(100%,260px),1fr))] gap-8">
                 @foreach ([
                     ['Venha a um encontro', 'Meetups mensais em Teresina e online. Não precisa saber tudo de PHP — só ter curiosidade.', 'Ver eventos', route('events.index')],
-                    ['Suba no palco', 'Lightning talk de 5 minutos conta. A gente revisa sua proposta e ajuda a ensaiar se você quiser.', 'Conhecer o CFP', route('cfp.show')],
+                    ['Suba no palco', 'Microtalk de 5 minutos conta. A gente revisa sua proposta e ajuda a ensaiar se você quiser.', 'Conhecer o CFP', route('cfp.show')],
                     ['Ajude a fazer acontecer', 'Espaço, café, transmissão, divulgação. Empresas e pessoas apoiam do jeito que dá.', 'Quero apoiar', route('supporters')],
                 ] as [$title, $text, $cta, $href])
                     <li class="grid content-start gap-2.5">

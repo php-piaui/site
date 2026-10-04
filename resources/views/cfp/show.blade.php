@@ -31,7 +31,7 @@
                     <h2 class="mt-0">Regras</h2>
                     <ul>
                         <li>Qualquer pessoa pode enviar, de qualquer lugar. Prioridade para quem é do Piauí e para quem nunca palestrou.</li>
-                        <li>Até 3 propostas por pessoa. Pode ser em dupla.</li>
+                        <li>Até {{ \App\Models\Cfp::MAX_PROPOSALS_PER_SPEAKER }} propostas por pessoa. Pode ser em dupla.</li>
                         <li>Conteúdo técnico ou de carreira ligado a PHP. Nada de pitch de produto.</li>
                         <li>Todas as pessoas palestrantes seguem o <a href="{{ route('conduct') }}">código de conduta</a>.</li>
                     </ul>

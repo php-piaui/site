@@ -11,7 +11,7 @@ use Illuminate\Support\Facades\Storage;
 uses(RefreshDatabase::class);
 
 test('updates the speaker profile and photo', function () {
-    Storage::fake('public');
+    Storage::fake('s3');
     $user = User::factory()->create();
 
     $this->actingAs($user)->put('/perfil', [
@@ -25,7 +25,7 @@ test('updates the speaker profile and photo', function () {
 
     $user->refresh();
     expect($user)->name->toBe('Ana Sousa')->headline->toBe('Dev backend');
-    Storage::disk('public')->assertExists($user->photo_path);
+    Storage::disk('s3')->assertExists($user->photo_path);
     $this->actingAs($user)->get('/perfil')->assertSee('value="github.com/anasousa"', false);
 });
 
@@ -58,4 +58,20 @@ test('deletes the account and review proposals, keeping decided talks with the n
     expect(User::find($user->id))->toBeNull()
         ->and(Proposal::find($review->id))->toBeNull()
         ->and($approved->fresh())->user_id->toBeNull()->speaker_name->toBe('Ana Sousa');
+});
+
+test('removes old photos from storage when replaced or when the account is deleted', function () {
+    Storage::fake('s3');
+    $user = User::factory()->create();
+
+    $this->actingAs($user)->put('/perfil', ['name' => 'Ana', 'photo' => UploadedFile::fake()->image('a.png')]);
+    $first = $user->fresh()->photo_path;
+    $this->actingAs($user)->put('/perfil', ['name' => 'Ana', 'photo' => UploadedFile::fake()->image('b.png')]);
+    $second = $user->fresh()->photo_path;
+
+    Storage::disk('s3')->assertMissing($first);
+    expect($user->fresh()->photoUrl())->toContain($second);
+
+    $this->actingAs($user->fresh())->delete('/perfil', ['confirmation' => 'EXCLUIR']);
+    Storage::disk('s3')->assertMissing($second);
 });

@@ -32,6 +32,9 @@ class Cfp extends Model
     /** @use HasFactory<CfpFactory> */
     use HasFactory;
 
+    public const MAX_PROPOSALS_PER_SPEAKER = 5;
+
+
     /**
      * @return array<string, mixed>
      */
@@ -68,6 +71,14 @@ class Cfp extends Model
     protected function open(Builder $query): void
     {
         $query->where('opens_at', '<=', now())->where('closes_at', '>=', now())->orderBy('closes_at');
+    }
+
+    /**
+     * ponytail: contagem antes do insert; dois envios simultâneos podem passar do limite. Trave com lock se isso virar problema.
+     */
+    public function acceptsMoreProposalsFrom(User $user): bool
+    {
+        return $this->proposals()->whereBelongsTo($user)->count() < self::MAX_PROPOSALS_PER_SPEAKER;
     }
 
     public function isOpen(): bool

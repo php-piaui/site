@@ -16,7 +16,7 @@
         <fieldset class="pp-fieldset" @error('formats') aria-invalid="true" @enderror>
             <legend class="pp-label">Formatos aceitos</legend>
             @foreach (\App\Enums\ProposalFormat::cases() as $format)
-                <x-checkbox name="formats[]" :id="'format-'.$format->value" :value="$format->value" :label="$format->label().' ('.$format->duration().')'" :checked="in_array($format->value, old('formats', ['palestra', 'lightning']), true)" />
+                <x-checkbox name="formats[]" :id="'format-'.$format->value" :value="$format->value" :label="$format->label().' ('.$format->duration().')'" :checked="in_array($format->value, old('formats', ['palestra', 'microtalk']), true)" />
             @endforeach
             @error('formats')
                 <p class="pp-error" role="alert">{{ $message }}</p>

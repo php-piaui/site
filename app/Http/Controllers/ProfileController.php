@@ -28,7 +28,7 @@ class ProfileController extends Controller
 
         if ($request->hasFile('photo')) {
             $previous = $user->photo_path;
-            $path     = $request->file('photo')->store('photos', 'public');
+            $path     = $request->file('photo')->store(User::PHOTO_DIRECTORY, 's3');
 
             if ($path === false) {
                 throw new RuntimeException('Não foi possível salvar a foto de perfil.');
@@ -37,7 +37,7 @@ class ProfileController extends Controller
             $user->photo_path = $path;
 
             if ($previous) {
-                Storage::disk('public')->delete($previous);
+                Storage::disk('s3')->delete($previous);
             }
         }
 
@@ -56,7 +56,7 @@ class ProfileController extends Controller
         $user->proposals()->where('status', ProposalStatus::Review)->delete();
 
         if ($user->photo_path) {
-            Storage::disk('public')->delete($user->photo_path);
+            Storage::disk('s3')->delete($user->photo_path);
         }
 
         Auth::logout();

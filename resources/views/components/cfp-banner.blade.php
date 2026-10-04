@@ -40,7 +40,7 @@
         <div style="position: relative">
             <span class="pp-cfp__eyebrow"><span class="pp-cfp__dot"></span>Call for papers aberto · {{ $eventName }}</span>
             <h2 class="pp-cfp__title">{{ $title ?? 'Sua primeira palestra pode ser aqui.' }}</h2>
-            <p class="pp-cfp__text">{{ $text ?? 'Palestra, lightning talk ou workshop. Não precisa ser especialista: conte o que você aprendeu resolvendo um problema real.' }}</p>
+            <p class="pp-cfp__text">{{ $text ?? 'Palestra, microtalk ou workshop. Não precisa ser especialista: conte o que você aprendeu resolvendo um problema real.' }}</p>
         </div>
         <div class="pp-cfp__side">
             @if ($parts)

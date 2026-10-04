@@ -40,7 +40,7 @@ class DatabaseSeeder extends Seeder
             'title'       => 'PHP Piauí Conf 2026', 'type' => EventType::Evento, 'modality' => EventModality::Hibrido,
             'starts_at'   => now()->addWeeks(7)->setTime(8, 0), 'ends_at' => now()->addWeeks(7)->setTime(18, 0),
             'place'       => 'Centro de Convenções de Teresina · transmissão no YouTube',
-            'description' => 'Um dia inteiro de palestras, lightning talks e workshops sobre PHP, Laravel e tudo o que roda em volta: testes, filas, deploy, carreira. Entrada gratuita, vagas limitadas no presencial.',
+            'description' => 'Um dia inteiro de palestras, microtalks e workshops sobre PHP, Laravel e tudo o que roda em volta: testes, filas, deploy, carreira. Entrada gratuita, vagas limitadas no presencial.',
         ]);
         Event::factory()->create([
             'title'     => 'Meetup #32 — Testes que não quebram',
