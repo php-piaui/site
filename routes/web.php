@@ -57,15 +57,22 @@ Route::view('/privacidade', 'legal.privacy')->name('privacy');
 
 Route::prefix('admin')->name('admin.')->group(function () {
     Route::get('/', function () {
-        $proposals = collect(SiteContent::proposals());
-        $status    = in_array(request('status'), ['review', 'approved', 'rejected'], true) ? request('status') : 'todas';
+        $proposals  = collect(SiteContent::proposals());
+        $status     = in_array(request('status'), ['review', 'approved', 'rejected'], true) ? request('status') : null;
+        $listUrl    = route('admin.proposals', array_filter(['status' => $status]));
+        $confirmUrl = fn (int $id, string $decision): string => route('admin.proposals', array_filter(['status' => $status, 'decidir' => $id, 'acao' => $decision]));
+        $deciding   = in_array(request('acao'), ['approve', 'reject'], true)
+            ? $proposals->where('status', 'review')->firstWhere('id', request()->integer('decidir'))
+            : null;
 
         return view('admin.proposals', [
-            'status'    => $status,
+            'status'    => $status ?? 'todas',
             'counts'    => $proposals->countBy('status')->put('todas', $proposals->count()),
-            'proposals' => $proposals->when($status !== 'todas', fn ($all) => $all->where('status', $status))
-                ->map(fn (array $proposal): array => $proposal + ['url' => '#', 'approve_url' => '#', 'reject_url' => '#'])
+            'proposals' => $proposals->when($status, fn ($all) => $all->where('status', $status))
+                ->map(fn (array $proposal): array => $proposal + ['url' => '#', 'approve_url' => $confirmUrl($proposal['id'], 'approve'), 'reject_url' => $confirmUrl($proposal['id'], 'reject')])
                 ->values()->all(),
+            'decision' => $deciding ? ['proposal' => $deciding, 'approve' => request('acao') === 'approve', 'action' => url("/admin/propostas/{$deciding['id']}/".request('acao'))] : null,
+            'listUrl'  => $listUrl,
         ]);
     })->name('proposals');
 

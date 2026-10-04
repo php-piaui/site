@@ -15,4 +15,23 @@
         ['value' => 'rejected', 'label' => 'Recusadas', 'href' => route('admin.proposals', ['status' => 'rejected']), 'count' => $counts['rejected'] ?? 0],
     ]" />
     <x-proposal-table :proposals="$proposals" />
+
+    @if ($decision)
+        <x-confirm-dialog
+            :tone="$decision['approve'] ? 'success' : 'danger'"
+            :title="$decision['approve'] ? 'Aprovar esta proposta?' : 'Recusar esta proposta?'"
+            :action="$decision['action']"
+            :cancel-href="$listUrl"
+            :confirm-label="$decision['approve'] ? 'Aprovar proposta' : 'Recusar proposta'"
+        >
+            <div class="grid gap-3.5">
+                <p><b class="text-fg">“{{ $decision['proposal']['title'] }}”</b> · {{ $decision['proposal']['speaker'] }}</p>
+                <p>{{ $decision['approve'] ? 'A pessoa recebe um e-mail de confirmação e a proposta fica somente leitura.' : 'A pessoa recebe um e-mail com a decisão. A proposta fica somente leitura e não dá para desfazer.' }}</p>
+                @unless ($decision['approve'])
+                    <x-text-area name="message" label="Mensagem para a pessoa" optional :rows="3" :max-length="500" hint="Entra no e-mail. Seja gentil e específico." />
+                @endunless
+            </div>
+        </x-confirm-dialog>
+        <script>document.addEventListener('keydown', event => event.key === 'Escape' && location.assign(@js($listUrl)));</script>
+    @endif
 </x-layouts.admin>

@@ -18,11 +18,11 @@ test('auto layout renders table and stacked cards', function () use ($proposals)
         ->assertSee('Lightning talk');
 });
 
-test('only proposals under review get approve and reject forms', function () use ($proposals) {
+test('only proposals under review get approve and reject links', function () use ($proposals) {
     $this->blade('<x-proposal-table layout="table" :proposals="$proposals" />', ['proposals' => $proposals])
-        ->assertSee('action="/p/1/approve"', false)
-        ->assertSee('action="/p/1/reject"', false)
-        ->assertSee('name="_token"', false)
+        ->assertSee('href="/p/1/approve"', false)
+        ->assertSee('href="/p/1/reject"', false)
+        ->assertDontSee('<form', false)
         ->assertDontSee('/p/2/approve', false)
         ->assertSee('href="/p/2"', false)
         ->assertDontSee('href="/p/1"', false)

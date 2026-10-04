@@ -66,3 +66,28 @@ test('filters admin proposals by status', function () {
         ->assertSee('Meu primeiro pacote no Packagist')
         ->assertDontSee('Docker para quem tem medo');
 });
+
+test('asks for confirmation before approving a proposal, keeping the filter', function () {
+    $this->get('/admin?status=review')
+        ->assertSee('href="'.e(route('admin.proposals', ['status' => 'review', 'decidir' => 1, 'acao' => 'approve'])).'"', false)
+        ->assertDontSee('Aprovar esta proposta?');
+
+    $this->get('/admin?status=review&decidir=1&acao=approve')
+        ->assertSee('Aprovar esta proposta?')
+        ->assertSee('Pest + Livewire: testando componentes sem sofrimento')
+        ->assertSee('action="'.url('/admin/propostas/1/approve').'"', false)
+        ->assertSee('href="'.route('admin.proposals', ['status' => 'review']).'"', false)
+        ->assertDontSee('Mensagem para a pessoa');
+});
+
+test('asks for an optional message when rejecting a proposal', function () {
+    $this->get('/admin?decidir=3&acao=reject')
+        ->assertSee('Recusar esta proposta?')
+        ->assertSee('action="'.url('/admin/propostas/3/reject').'"', false)
+        ->assertSee('Mensagem para a pessoa');
+});
+
+test('ignores decisions on proposals that are no longer under review', function () {
+    $this->get('/admin?decidir=2&acao=approve')->assertDontSee('Aprovar esta proposta?');
+    $this->get('/admin?decidir=1&acao=delete')->assertDontSee('esta proposta?');
+});
