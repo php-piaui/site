@@ -13,7 +13,5 @@
     stroke-width="2"
     stroke-linecap="round"
     stroke-linejoin="round"
-    width="20"
-    height="20"
-    {{ $attributes->merge(['class' => 'shrink-0', 'aria-hidden' => 'true']) }}
+    {{ $attributes->merge(['class' => 'shrink-0', 'aria-hidden' => 'true', 'width' => 20, 'height' => 20]) }}
 >{!! $icons[$name] ?? throw new InvalidArgumentException("Ícone [{$name}] não existe no subconjunto Lucide.") !!}</svg>
