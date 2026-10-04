@@ -43,7 +43,7 @@
             </ul>
         </div>
         <div class="pp-footer__base">
-            <span>© {{ now()->year }} PHP Piauí · Teresina, PI</span>
+            <span>© {{ now()->year }} PHP Piauí</span>
             <span style="display: flex; gap: 20px"><a href="{{ $conductHref }}">Código de conduta</a><a href="{{ $privacyHref }}">Política de privacidade</a></span>
         </div>
     </div>

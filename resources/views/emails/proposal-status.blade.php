@@ -9,13 +9,13 @@
             'cta' => 'Ver minha proposta', 'ctaBg' => '#D0440F',
         ],
         'recusada' => [
-            'badgeBg' => '#FDEDEB', 'badgeBorder' => '#F5C2BB', 'badgeColor' => '#A12719', 'badge' => '✕&nbsp; Recusada',
+            'badgeBg' => '#FDEDEB', 'badgeBorder' => '#F4B4AC', 'badgeColor' => '#A12719', 'badge' => '✕&nbsp; Recusada',
             'heading' => "Desta vez sua proposta não entrou, {$nome}",
             'preheader' => "Obrigado por enviar “{$titulo}” ao {$evento}.",
             'cta' => 'Ver próximos eventos', 'ctaBg' => '#40419A',
         ],
         'recebida' => [
-            'badgeBg' => '#FFF6DC', 'badgeBorder' => '#F0D98C', 'badgeColor' => '#7A5100', 'badge' => '⏳&nbsp; Em revisão',
+            'badgeBg' => '#FFF6DC', 'badgeBorder' => '#F5D27A', 'badgeColor' => '#7A5100', 'badge' => '⏳&nbsp; Em revisão',
             'heading' => 'Recebemos sua proposta',
             'preheader' => "“{$titulo}” chegou ao CFP do {$evento}.",
             'cta' => 'Ver minha proposta', 'ctaBg' => '#D0440F',
