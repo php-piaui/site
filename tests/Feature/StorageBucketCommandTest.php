@@ -77,3 +77,23 @@ test('fails without a configured bucket', function () {
 
     $this->artisan('storage:bucket')->expectsOutputToContain('AWS_BUCKET')->assertFailed();
 });
+
+test('warns instead of failing on providers without bucket policies like cloudflare r2', function () {
+    $sent = fakeS3Client([
+        new Result(),
+        fn (CommandInterface $command) => new S3Exception('Not implemented', $command, ['code' => 'NotImplemented', 'response' => new Response(501)]),
+    ]);
+
+    $this->artisan('storage:bucket')->expectsOutputToContain('Cloudflare R2')->assertSuccessful();
+
+    expect(commandNames($sent))->toBe(['HeadBucket', 'PutBucketPolicy']);
+});
+
+test('still fails on other policy errors', function () {
+    fakeS3Client([
+        new Result(),
+        fn (CommandInterface $command) => new S3Exception('Access denied', $command, ['code' => 'AccessDenied', 'response' => new Response(403)]),
+    ]);
+
+    $this->artisan('storage:bucket');
+})->throws(S3Exception::class);
