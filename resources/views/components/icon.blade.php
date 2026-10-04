@@ -10,8 +10,7 @@
     viewBox="0 0 24 24"
     fill="none"
     stroke="currentColor"
-    stroke-width="2"
     stroke-linecap="round"
     stroke-linejoin="round"
-    {{ $attributes->merge(['class' => 'shrink-0', 'aria-hidden' => 'true', 'width' => 20, 'height' => 20]) }}
+    {{ $attributes->merge(['class' => 'shrink-0', 'aria-hidden' => 'true', 'width' => 20, 'height' => 20, 'stroke-width' => 2]) }}
 >{!! $icons[$name] ?? throw new InvalidArgumentException("Ícone [{$name}] não existe no subconjunto Lucide.") !!}</svg>
