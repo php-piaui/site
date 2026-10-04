@@ -57,6 +57,7 @@
 .pp-btn:hover{background:var(--surface-sunken);text-decoration:none}
 .pp-btn:active{transform:translateY(1px)}
 .pp-btn:focus-visible{outline:none;box-shadow:var(--ring-focus)}
+.pp-photo__drop input:focus-visible + .pp-btn{box-shadow:var(--ring-focus)}
 .pp-btn--cta,.pp-btn--cta:hover{color:var(--cta-fg)}.pp-btn--cta{background:var(--cta-bg)}.pp-btn--cta:hover{background:var(--cta-bg-hover)}
 .pp-btn--primary,.pp-btn--primary:hover{color:var(--primary-fg)}.pp-btn--primary{background:var(--primary-bg)}.pp-btn--primary:hover{background:var(--primary-bg-hover)}
 .pp-btn--secondary,.pp-btn--secondary:hover{color:var(--fg-brand);border-color:var(--border-brand)}.pp-btn--secondary{background:var(--surface-card)}.pp-btn--secondary:hover{background:var(--surface-brand-soft)}
