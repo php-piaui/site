@@ -219,5 +219,8 @@ jobs:
             $PHP composer.phar install --no-interaction --prefer-dist --optimize-autoloader --no-dev
             $PHP artisan optimize:clear
             $PHP artisan migrate --force
+            # Cria o bucket S3 se faltar e reaplica a leitura pública de photos/*.
+            # Falha (e para o deploy) se AWS_BUCKET não estiver no .env do servidor.
+            $PHP artisan storage:bucket
             $PHP artisan optimize
             $PHP artisan queue:restart
