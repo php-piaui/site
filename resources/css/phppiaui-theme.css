@@ -98,4 +98,29 @@
   h1, h2, h3, h4 { @apply font-display font-bold tracking-tight; text-wrap: balance; }
   p { text-wrap: pretty; }
   :focus-visible { @apply outline-2 outline-offset-2 outline-indigo-500 rounded-xs; }
+  [data-theme=dark] :focus-visible { @apply outline-indigo-300; }
+  h1 { @apply text-4xl lg:text-5xl; }
+  h2 { @apply text-3xl; }
+  h3 { @apply text-2xl; }
+  h4 { @apply text-xl; }
+  a { color: var(--fg-link); text-decoration-thickness: 1px; text-underline-offset: 3px; }
+  a:hover { color: var(--fg-link-hover); text-decoration-thickness: 2px; }
+  code, kbd, pre { font-size: .9em; }
+  @media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after { animation-duration: .01ms !important; transition-duration: .01ms !important; }
+  }
+}
+
+/* Texto longo (código de conduta, privacidade) */
+@layer components {
+  .pp-prose { max-width: var(--measure); @apply text-lg text-fg; }
+  .pp-prose > * + * { margin-top: 1em; }
+  .pp-prose h2 { @apply text-2xl; margin-top: 2.25em; }
+  .pp-prose h3 { @apply text-xl; margin-top: 1.75em; }
+  .pp-prose ul, .pp-prose ol { padding-left: 1.25em; }
+  .pp-prose ul { list-style: disc; }
+  .pp-prose ol { list-style: decimal; }
+  .pp-prose li + li { margin-top: .4em; }
+  .pp-prose code { @apply bg-sunken rounded-xs; padding: .1em .35em; }
+  .pp-prose blockquote { margin: 0; padding-left: 1em; border-left: 3px solid var(--indigo-300); @apply text-fg-muted; }
 }

@@ -31,6 +31,17 @@
   --container-max:1200px;--gutter:16px;--gutter-md:24px;--touch-min:44px;--header-h:64px;
   --font-body:'Instrument Sans',ui-sans-serif,system-ui,sans-serif;
   --tracking-snug:-0.01em;--tracking-caps:0.06em;
+  --bg-page:var(--areia-50);--surface-inverse:var(--indigo-950);
+  --status-review-fg:var(--warning-fg);--status-review-bg:var(--warning-bg);--status-review-border:var(--warning-border);
+  --status-approved-fg:var(--success-fg);--status-approved-bg:var(--success-bg);--status-approved-border:var(--success-border);
+  --status-rejected-fg:var(--danger-fg);--status-rejected-bg:var(--danger-bg);--status-rejected-border:var(--danger-border);
+  --border-width:1px;--border-width-strong:2px;
+  --space-0:0;--space-1:4px;--space-2:8px;--space-3:12px;--space-4:16px;--space-5:20px;--space-6:24px;--space-8:32px;--space-10:40px;--space-12:48px;--space-16:64px;--space-20:80px;--space-24:96px;
+  --gutter-lg:32px;
+  --leading-xs:1rem;--leading-sm:1.25rem;--leading-base:1.5rem;--leading-lg:1.75rem;--leading-xl:1.75rem;--leading-2xl:2rem;--leading-3xl:2.25rem;--leading-4xl:2.625rem;--leading-5xl:3.25rem;--leading-6xl:4rem;
+  --weight-regular:400;--weight-medium:500;--weight-semibold:600;--weight-bold:700;--weight-black:800;
+  --measure:68ch;
+  color-scheme:light;
 }
 
 [data-theme="dark"] {
@@ -44,6 +55,8 @@
   --danger-fg:var(--red-300);--danger-bg:#311715;--danger-border:#64291F;--danger-solid:var(--red-300);
   --info-fg:var(--blue-300);--info-bg:#132339;--info-border:#24426B;--info-solid:var(--blue-300);
   --overlay:rgba(5,5,12,.7);
+  --bg-page:#121220;--surface-inverse:var(--indigo-50);
+  color-scheme:dark;
   --shadow-xs:0 1px 2px rgba(0,0,0,.4);
   --shadow-sm:0 1px 2px rgba(0,0,0,.4),0 2px 6px rgba(0,0,0,.3);
   --shadow-md:0 2px 4px rgba(0,0,0,.4),0 8px 20px rgba(0,0,0,.4);
