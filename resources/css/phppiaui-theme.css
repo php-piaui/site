@@ -1,0 +1,101 @@
+/* ============================================================
+   PHP Piauí — Tailwind CSS v4 theme
+   Importado do design system (claude.ai/design, tailwind/phppiaui-theme.css).
+   Dark mode: <html data-theme="dark"> (see @custom-variant below).
+   ============================================================ */
+@custom-variant dark (&:where([data-theme=dark], [data-theme=dark] *));
+
+@theme {
+  --font-display: "Bricolage Grotesque", ui-sans-serif, system-ui, sans-serif;
+  --font-sans: "Instrument Sans", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
+
+  /* Primária — índigo (marca = 700) */
+  --color-indigo-50: #F1F1FD; --color-indigo-100: #E4E4FB; --color-indigo-200: #CDCEF8; --color-indigo-300: #B3B4F5;
+  --color-indigo-400: #8E8FE6; --color-indigo-500: #6B6CD0; --color-indigo-600: #5253B6; --color-indigo-700: #40419A;
+  --color-indigo-800: #36377E; --color-indigo-900: #2D2E66; --color-indigo-950: #1B1B3D;
+  /* Destaque — caju (CTA = 600) */
+  --color-caju-50: #FFF4ED; --color-caju-100: #FFE5D3; --color-caju-200: #FFC8A6; --color-caju-300: #FFA26F;
+  --color-caju-400: #FA783C; --color-caju-500: #EC5A1B; --color-caju-600: #D0440F; --color-caju-700: #AB350F;
+  --color-caju-800: #882D13; --color-caju-900: #6E2813; --color-caju-950: #3B1107;
+  /* Neutros — areia */
+  --color-areia-0: #FFFFFF; --color-areia-50: #FAF9F6; --color-areia-100: #F3F1EC; --color-areia-200: #E6E3DB;
+  --color-areia-300: #D1CDC2; --color-areia-400: #A8A398; --color-areia-500: #7C776C; --color-areia-600: #5E5A51;
+  --color-areia-700: #46433D; --color-areia-800: #2E2C28; --color-areia-900: #1E1D1A; --color-areia-950: #121110;
+
+  /* Semânticas (resolvem para claro/escuro via variáveis abaixo) */
+  --color-page: var(--pp-bg-page);
+  --color-card: var(--pp-surface-card);
+  --color-sunken: var(--pp-surface-sunken);
+  --color-brand: var(--pp-fg-brand);
+  --color-brand-soft: var(--pp-surface-brand-soft);
+  --color-fg: var(--pp-fg-1);
+  --color-fg-muted: var(--pp-fg-2);
+  --color-line: var(--pp-border-1);
+  --color-line-strong: var(--pp-border-strong);
+  --color-cta: var(--pp-cta-bg);
+  --color-cta-hover: var(--pp-cta-bg-hover);
+  --color-on-cta: var(--pp-cta-fg);
+  --color-primary: var(--pp-primary-bg);
+  --color-primary-hover: var(--pp-primary-bg-hover);
+  --color-on-primary: var(--pp-primary-fg);
+  --color-success: var(--pp-success-fg); --color-success-bg: var(--pp-success-bg); --color-success-line: var(--pp-success-border);
+  --color-warning: var(--pp-warning-fg); --color-warning-bg: var(--pp-warning-bg); --color-warning-line: var(--pp-warning-border);
+  --color-danger: var(--pp-danger-fg);   --color-danger-bg: var(--pp-danger-bg);   --color-danger-line: var(--pp-danger-border);
+  --color-info: var(--pp-info-fg);       --color-info-bg: var(--pp-info-bg);       --color-info-line: var(--pp-info-border);
+
+  /* Tipografia — text-xs … text-6xl com line-height */
+  --text-xs: 0.75rem;    --text-xs--line-height: 1rem;
+  --text-sm: 0.875rem;   --text-sm--line-height: 1.25rem;
+  --text-base: 1rem;     --text-base--line-height: 1.5rem;
+  --text-lg: 1.125rem;   --text-lg--line-height: 1.75rem;
+  --text-xl: 1.25rem;    --text-xl--line-height: 1.75rem;
+  --text-2xl: 1.5rem;    --text-2xl--line-height: 2rem;
+  --text-3xl: 1.875rem;  --text-3xl--line-height: 2.25rem;
+  --text-4xl: 2.375rem;  --text-4xl--line-height: 2.625rem;
+  --text-5xl: 3rem;      --text-5xl--line-height: 3.25rem;
+  --text-6xl: 4rem;      --text-6xl--line-height: 4rem;
+  --tracking-tight: -0.02em;
+
+  --spacing: 4px;
+  --radius-xs: 4px; --radius-sm: 6px; --radius-md: 10px; --radius-lg: 16px; --radius-xl: 24px;
+  --shadow-xs: 0 1px 2px rgb(27 27 61 / .06);
+  --shadow-sm: 0 1px 2px rgb(27 27 61 / .06), 0 2px 6px rgb(27 27 61 / .06);
+  --shadow-md: 0 2px 4px rgb(27 27 61 / .06), 0 8px 20px rgb(27 27 61 / .08);
+  --shadow-lg: 0 4px 8px rgb(27 27 61 / .08), 0 20px 40px rgb(27 27 61 / .14);
+  --breakpoint-sm: 40rem; --breakpoint-md: 48rem; --breakpoint-lg: 64rem; --breakpoint-xl: 80rem;
+  --container-content: 75rem; --container-prose: 45rem; --container-narrow: 30rem;
+  --ease-out: cubic-bezier(.2,.7,.2,1);
+}
+
+/* Valores claro/escuro das cores semânticas */
+:root {
+  --pp-bg-page: #FAF9F6; --pp-surface-card: #FFFFFF; --pp-surface-sunken: #F3F1EC; --pp-surface-brand-soft: #F1F1FD;
+  --pp-fg-1: #1E1D1A; --pp-fg-2: #5E5A51; --pp-fg-brand: #40419A;
+  --pp-border-1: #E6E3DB; --pp-border-strong: #7C776C;
+  --pp-cta-bg: #D0440F; --pp-cta-bg-hover: #AB350F; --pp-cta-fg: #FFFFFF;
+  --pp-primary-bg: #40419A; --pp-primary-bg-hover: #36377E; --pp-primary-fg: #FFFFFF;
+  --pp-success-fg: #17643D; --pp-success-bg: #EAF6EF; --pp-success-border: #A9DDBE;
+  --pp-warning-fg: #7A5100; --pp-warning-bg: #FFF6DC; --pp-warning-border: #F5D27A;
+  --pp-danger-fg: #A12719;  --pp-danger-bg: #FDEDEB;  --pp-danger-border: #F4B4AC;
+  --pp-info-fg: #194F8F;    --pp-info-bg: #EAF2FC;    --pp-info-border: #AFCCF2;
+}
+[data-theme=dark] {
+  --pp-bg-page: #121220; --pp-surface-card: #1B1B2C; --pp-surface-sunken: #161625; --pp-surface-brand-soft: #24244A;
+  --pp-fg-1: #EEEEF6; --pp-fg-2: #B4B4C9; --pp-fg-brand: #B3B4F5;
+  --pp-border-1: #2C2C42; --pp-border-strong: #71718F;
+  --pp-cta-bg: #FA783C; --pp-cta-bg-hover: #FFA26F; --pp-cta-fg: #3B1107;
+  --pp-primary-bg: #B3B4F5; --pp-primary-bg-hover: #CDCEF8; --pp-primary-fg: #1B1B3D;
+  --pp-success-fg: #6FD39C; --pp-success-bg: #12291D; --pp-success-border: #24553A;
+  --pp-warning-fg: #F7C64A; --pp-warning-bg: #2C2410; --pp-warning-border: #5A4815;
+  --pp-danger-fg: #FF8B7D;  --pp-danger-bg: #311715;  --pp-danger-border: #64291F;
+  --pp-info-fg: #86B6F5;    --pp-info-bg: #132339;    --pp-info-border: #24426B;
+}
+
+/* Base — tradução de tokens/base.css para os tokens acima */
+@layer base {
+  body { @apply bg-page text-fg font-sans antialiased; }
+  h1, h2, h3, h4 { @apply font-display font-bold tracking-tight; text-wrap: balance; }
+  p { text-wrap: pretty; }
+  :focus-visible { @apply outline-2 outline-offset-2 outline-indigo-500 rounded-xs; }
+}
