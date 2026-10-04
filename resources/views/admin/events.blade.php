@@ -11,11 +11,11 @@
             <tbody>
                 @foreach ($events as $event)
                     <tr>
-                        <td><div class="pp-table__title">{{ $event['title'] }}</div><div class="pp-table__sub">{{ $event['place'] }}</div></td>
-                        <td class="pp-table__muted">{{ $event['date'] }}</td>
-                        <td><x-badge :preset="$event['modality']" size="sm" /></td>
+                        <td><div class="pp-table__title">{{ $event->title }}@unless ($event->published_at) <x-badge size="sm">Rascunho</x-badge>@endunless</div><div class="pp-table__sub">{{ $event->place }}</div></td>
+                        <td class="pp-table__muted">{{ $event->starts_at->format('d/m/Y') }}</td>
+                        <td><x-badge :preset="$event->modality->value" size="sm" /></td>
                         <td>
-                            @if ($event['cfp_open'] ?? false)
+                            @if ($event->cfp?->isOpen())
                                 <x-badge preset="cfp-open" size="sm" />
                             @else
                                 <span class="pp-table__muted">—</span>
@@ -23,9 +23,9 @@
                         </td>
                         <td>
                             <div class="pp-table__actions">
-                                <x-button variant="ghost" size="sm" icon="pencil" href="#">Editar</x-button>
-                                @if (isset($event['register_url']) && ! ($event['cfp_open'] ?? false))
-                                    <x-button variant="secondary" size="sm" icon="megaphone" :href="route('admin.cfp.create')">Abrir CFP</x-button>
+                                <x-button variant="ghost" size="sm" icon="pencil" :href="route('admin.events.edit', $event)">Editar</x-button>
+                                @if (! $event->cfp && ! $event->isPast())
+                                    <x-button variant="secondary" size="sm" icon="megaphone" :href="route('admin.cfp.create', ['evento' => $event->id])">Abrir CFP</x-button>
                                 @endif
                             </div>
                         </td>

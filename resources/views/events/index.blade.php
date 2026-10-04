@@ -9,17 +9,7 @@
             @if ($tab === 'proximos')
                 @forelse ($upcoming as $event)
                     @if ($loop->first)<div class="grid grid-cols-[repeat(auto-fill,minmax(min(100%,320px),1fr))] gap-5">@endif
-                    <x-event-card
-                        :title="$event['title']"
-                        :type="$event['type']"
-                        :modality="$event['modality']"
-                        :date="$event['date']"
-                        :time="$event['time'] ?? null"
-                        :place="$event['place']"
-                        :register-url="$event['register_url'] ?? null"
-                        :cfp-open="$event['cfp_open'] ?? false"
-                        :href="route('events.show', $event['id'])"
-                    />
+                    @include('events.card')
                     @if ($loop->last)</div>@endif
                 @empty
                     <x-empty-state title="Nenhum evento marcado por enquanto">
@@ -34,15 +24,7 @@
                 <div class="grid gap-6">
                     <div class="grid grid-cols-[repeat(auto-fill,minmax(min(100%,280px),1fr))] gap-5">
                         @foreach ($past as $event)
-                            <x-event-card
-                                past
-                                :title="$event['title']"
-                                :type="$event['type']"
-                                :modality="$event['modality']"
-                                :date="$event['date']"
-                                :place="$event['place']"
-                                :href="route('events.show', $event['id'])"
-                            />
+                            @include('events.card')
                         @endforeach
                     </div>
                     @if ($past->hasPages())

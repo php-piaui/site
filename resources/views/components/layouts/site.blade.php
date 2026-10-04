@@ -15,6 +15,7 @@
             ['key' => 'cfp', 'label' => 'Call for papers', 'href' => route('cfp.show')],
             ['key' => 'apoiadores', 'label' => 'Apoiadores', 'href' => route('supporters')],
             ...(auth()->check() ? [['key' => 'minhas', 'label' => 'Minhas propostas', 'href' => route('proposals.index')]] : []),
+            ...(auth()->user()?->can('admin') ? [['key' => 'admin', 'label' => 'Painel', 'href' => route('admin.proposals')]] : []),
         ]"
     />
     <main class="flex-1">{{ $slot }}</main>

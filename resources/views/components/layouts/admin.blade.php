@@ -33,7 +33,11 @@
                 ><x-icon :name="$item['icon']" :width="18" :height="18" />{{ $item['label'] }}</a>
             @endforeach
         </nav>
-        <a href="{{ route('home') }}" class="mt-auto flex min-h-11 items-center gap-2 px-3 text-sm font-medium text-indigo-200 no-underline hover:text-white">
+        <form method="POST" action="{{ route('logout') }}" class="mt-auto">
+            @csrf
+            <button type="submit" class="flex min-h-11 w-full cursor-pointer items-center gap-2 px-3 text-sm font-medium text-indigo-200 hover:text-white"><x-icon name="log-out" :width="16" :height="16" />Sair</button>
+        </form>
+        <a href="{{ route('home') }}" class= flex min-h-11 items-center gap-2 px-3 text-sm font-medium text-indigo-200 no-underline hover:text-white">
             <x-icon name="arrow-left" :width="16" :height="16" />Voltar ao site
         </a>
     </aside>

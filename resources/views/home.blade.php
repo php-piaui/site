@@ -19,29 +19,28 @@
         <x-section-head title="Próximo evento">
             <x-slot:action><x-button variant="ghost" :href="route('events.index')" icon-right="arrow-right">Todos os eventos</x-button></x-slot:action>
         </x-section-head>
-        <x-event-card
-            featured
-            :title="$event['title']"
-            :type="$event['type']"
-            :modality="$event['modality']"
-            :date="$event['date']"
-            :time="$event['time']"
-            :place="$event['place']"
-            :register-url="$event['register_url']"
-            :cfp-open="$event['cfp_open']"
-            :href="route('events.show', $event['id'])"
-        />
+        @if ($event)
+            @include('events.card', ['event' => $event, 'featured' => true])
+        @else
+            <x-empty-state title="Nenhum evento marcado por enquanto">
+                Estamos organizando o próximo. A data sai primeiro no Instagram @php.piaui.
+                <x-slot:actions><x-button variant="secondary" icon="instagram" href="https://www.instagram.com/php.piaui/" external>Seguir no Instagram</x-button></x-slot:actions>
+            </x-empty-state>
+        @endif
     </section>
 
-    <section class="pp-container pb-16">
-        <x-cfp-banner
-            :event-name="$cfp['event']"
-            :deadline-label="$cfp['deadline_label']"
-            :deadline="$cfp['deadline']"
-            :submit-url="\App\Support\SiteContent::submitUrl()"
-            :rules-url="route('cfp.show')"
-        />
-    </section>
+    @if ($cfp)
+        <section class="pp-container pb-16">
+            <x-cfp-banner
+                :event-name="$cfp->event->title"
+                :deadline-label="$cfp->deadlineLabel()"
+                :deadline="$cfp->closes_at"
+                :countdown="$cfp->show_countdown"
+                :submit-url="\App\Support\SiteContent::submitUrl()"
+                :rules-url="route('cfp.show')"
+            />
+        </section>
+    @endif
 
     <section class="border-y border-line bg-card">
         <div class="pp-container py-14">

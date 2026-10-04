@@ -4,26 +4,26 @@
             <div><x-button variant="cta" icon="plus" :href="\App\Support\SiteContent::submitUrl()">Nova proposta</x-button></div>
         </x-page-head>
         @forelse ($proposals as $proposal)
-            @php($locked = $proposal['status'] !== 'review')
+            @php($locked = $proposal->isDecided())
             @if ($loop->first)<ul class="grid gap-3">@endif
             <li @class(['pp-card grid gap-3 p-5', 'bg-sunken shadow-none' => $locked])>
                 <div class="flex flex-wrap items-center gap-2">
-                    <x-badge :preset="$proposal['status']" />
-                    <x-badge :preset="$proposal['format']" size="sm" />
+                    <x-badge :preset="$proposal->status->value" />
+                    <x-badge :preset="$proposal->format->value" size="sm" />
                     @if ($locked)
                         <span class="ml-auto inline-flex items-center gap-1 text-[13px] text-fg-muted"><x-icon name="lock" :width="14" :height="14" />Somente leitura</span>
                     @endif
                 </div>
                 <div>
-                    <h2 class="text-xl leading-[26px]">{{ $proposal['title'] }}</h2>
-                    <p class="mt-1 text-sm text-fg-muted">{{ $proposal['event'] }} · enviada em {{ $proposal['sent_at'] }}@isset($proposal['decided_at']) · decisão em {{ $proposal['decided_at'] }}@endisset</p>
+                    <h2 class="text-xl leading-[26px]">{{ $proposal->title }}</h2>
+                    <p class="mt-1 text-sm text-fg-muted">{{ $proposal->cfp->event->title }} · enviada em {{ $proposal->created_at->format('d/m/Y') }}@if ($proposal->decided_at) · decisão em {{ $proposal->decided_at->format('d/m/Y') }}@endif</p>
                 </div>
                 <div class="flex flex-wrap gap-2">
                     @if ($locked)
-                        <x-button variant="secondary" size="sm" icon="eye" :href="route('proposals.show', $proposal['id'])">Ver proposta</x-button>
+                        <x-button variant="secondary" size="sm" icon="eye" :href="route('proposals.show', $proposal)">Ver proposta</x-button>
                     @else
-                        <x-button variant="secondary" size="sm" icon="pencil" :href="route('proposals.show', $proposal['id'])">Editar</x-button>
-                        <span class="self-center text-[13px] text-fg-muted">Editável até 30/10</span>
+                        <x-button variant="secondary" size="sm" icon="pencil" :href="route('proposals.show', $proposal)">Editar</x-button>
+                        <span class="self-center text-[13px] text-fg-muted">Editável enquanto estiver em revisão</span>
                     @endif
                 </div>
             </li>

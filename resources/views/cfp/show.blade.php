@@ -1,14 +1,15 @@
 <x-layouts.site title="Call for papers" current="cfp">
+    @if ($cfp)
     <div class="pp-container pb-18">
         <x-page-head
             :crumbs="[['label' => 'Início', 'href' => route('home')], ['label' => 'Call for papers']]"
-            :eyebrow="'Call for papers · '.$cfp['event']"
+            :eyebrow="'Call for papers · '.$cfp->event->title"
             title="Sua primeira palestra pode ser aqui."
             lead="Não precisa ser especialista. Se você resolveu um problema com PHP e aprendeu alguma coisa no caminho, isso já é uma boa palestra."
         >
             <div class="mt-1 flex flex-wrap items-center gap-2">
                 <x-button variant="cta" size="lg" icon="send" :href="\App\Support\SiteContent::submitUrl()">Submeter proposta</x-button>
-                <span class="inline-flex items-center gap-1.5 text-[15px] text-fg-muted"><x-icon name="clock" :width="16" :height="16" />Prazo: <b class="text-fg">{{ $cfp['deadline_label'] }}</b></span>
+                <span class="inline-flex items-center gap-1.5 text-[15px] text-fg-muted"><x-icon name="clock" :width="16" :height="16" />Prazo: <b class="text-fg">{{ $cfp->deadlineLabel() }}</b></span>
             </div>
         </x-page-head>
         <div class="flex flex-wrap items-start gap-10">
@@ -16,16 +17,12 @@
                 <section>
                     <h2 class="mb-4 text-2xl">Formatos</h2>
                     <div class="grid grid-cols-[repeat(auto-fit,minmax(min(100%,200px),1fr))] gap-3">
-                        @foreach ([
-                            ['palestra', 'Palestra', '30 a 40 minutos', 'Um tema com começo, meio e fim. Ideal para contar um caso real.'],
-                            ['lightning', 'Lightning talk', '5 a 10 minutos', 'Uma ideia, uma dica, uma ferramenta. O melhor formato para estrear.'],
-                            ['workshop', 'Workshop', '2 horas, mão na massa', 'Turma de até 25 pessoas com computador. Precisa de roteiro prático.'],
-                        ] as [$format, $title, $duration, $text])
+                        @foreach ($cfp->formats as $format)
                             <div class="pp-card grid content-start gap-2 p-5">
-                                <div><x-badge :preset="$format" /></div>
-                                <h3 class="text-[19px] leading-6">{{ $title }}</h3>
-                                <p class="font-mono text-sm font-medium text-brand">{{ $duration }}</p>
-                                <p class="text-[15px] text-fg-muted">{{ $text }}</p>
+                                <div><x-badge :preset="$format->value" /></div>
+                                <h3 class="text-[19px] leading-6">{{ $format->label() }}</h3>
+                                <p class="font-mono text-sm font-medium text-brand">{{ $format->duration() }}</p>
+                                <p class="text-[15px] text-fg-muted">{{ $format->pitch() }}</p>
                             </div>
                         @endforeach
                     </div>
@@ -40,24 +37,37 @@
                     </ul>
                     <h2>Como avaliamos</h2>
                     <p>Um comitê de voluntários lê cada proposta sem olhar nome ou empresa na primeira rodada. Olhamos clareza, utilidade para a plateia e variedade da grade.</p>
+                    @if ($cfp->rules)
+                        <h2>Observações</h2>
+                        <p class="whitespace-pre-line">{{ $cfp->rules }}</p>
+                    @endif
                     <h2>Datas</h2>
                     <ul>
-                        <li><b>30 de outubro</b> — fim do envio</li>
-                        <li><b>7 de novembro</b> — resposta por e-mail para todo mundo</li>
-                        <li><b>21 de novembro</b> — evento</li>
+                        <li><b>{{ $cfp->closes_at->translatedFormat('j \\d\\e F') }}</b> — fim do envio</li>
+                        <li><b>{{ $cfp->event->starts_at->translatedFormat('j \\d\\e F') }}</b> — evento</li>
                     </ul>
                 </section>
             </div>
             <aside class="pp-card sticky top-22 grid flex-[1_1_300px] gap-3.5 p-6">
                 <div><x-badge preset="cfp-open" /></div>
-                <h2 class="text-[22px] leading-7">Envie até {{ $cfp['deadline_label'] }}</h2>
+                <h2 class="text-[22px] leading-7">Envie até {{ $cfp->deadlineLabel() }}</h2>
                 <p class="text-[15px] text-fg-muted">Leva uns 10 minutos. Você pode editar enquanto a proposta estiver em revisão.</p>
                 <x-button variant="cta" size="lg" block icon="send" :href="\App\Support\SiteContent::submitUrl()">Submeter proposta</x-button>
             </aside>
         </div>
     </div>
 
-    @if ($explainAccount)
+    @else
+        <div class="pp-container pb-18">
+            <x-page-head title="Call for papers" :crumbs="[['label' => 'Início', 'href' => route('home')], ['label' => 'Call for papers']]" />
+            <x-empty-state icon="megaphone" title="Nenhum CFP aberto agora">
+                Quando abrir a chamada do próximo evento, ela aparece aqui e no Instagram @php.piaui.
+                <x-slot:actions><x-button variant="secondary" :href="route('events.index')">Ver eventos</x-button></x-slot:actions>
+            </x-empty-state>
+        </div>
+    @endif
+
+    @if ($cfp && $explainAccount)
         {{-- Explicação pré-login (ADR 0001 §2.3): por que a conta é necessária, antes de qualquer redirecionamento. --}}
         <div class="pp-overlay">
             <div class="pp-dialog pp-dialog--wide relative" role="dialog" aria-modal="true" aria-labelledby="pre-login-title">
