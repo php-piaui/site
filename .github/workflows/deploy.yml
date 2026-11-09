@@ -173,6 +173,8 @@ jobs:
             pint.json
             phpstan.neon
             **/*.md
+            Identidade Visual/**
+            docs/**
             **/resources/css/**
             **/resources/js/**
             vite.config.js
@@ -193,7 +195,7 @@ jobs:
       # Idempotente: pode ser re-executado sozinho após uma falha de SSH, sem
       # refazer o build nem o upload.
       - name: Executing remote ssh commands using password
-        uses: appleboy/ssh-action@master
+        uses: appleboy/ssh-action@v1.2.5
         with:
           host: ${{ vars.SSH_HOST || vars.FTP_HOST }}
           username: ${{ vars.FTP_USER }}
@@ -203,6 +205,24 @@ jobs:
             set -e
             PHP=/usr/local/bin/php
             cd ${{ env.REMOTE_DIR }}
+            # O .env de producao e colocado a mao, uma vez, e o FTP nao o envia
+            # nem apaga. Sem ele o migrate morre com erro pouco claro.
+            [ -f .env ] || { echo "ERRO: ${{ env.REMOTE_DIR }}.env nao existe no servidor. Suba o .env de producao e re-execute este job."; exit 1; }
+            # O composer nao vem no repositorio. Ordem: o do cPanel, o do PATH,
+            # um .phar de deploy anterior e, por ultimo, baixar com hash conferido.
+            if [ -x /opt/cpanel/composer/bin/composer ]; then
+              COMPOSER="$PHP /opt/cpanel/composer/bin/composer"
+            elif command -v composer >/dev/null 2>&1; then
+              COMPOSER="composer"
+            elif [ -f composer.phar ]; then
+              COMPOSER="$PHP composer.phar"
+            else
+              curl -sSf -o composer.phar https://getcomposer.org/composer-stable.phar
+              curl -sSf -o composer.phar.sha256 https://getcomposer.org/composer-stable.phar.sha256sum
+              echo "$(cut -d' ' -f1 composer.phar.sha256)  composer.phar" | sha256sum -c -
+              rm -f composer.phar.sha256
+              COMPOSER="$PHP composer.phar"
+            fi
             # Manda as requisições da raiz para public/. O .htaccess da raiz não
             # vai para o git porque o cPanel grava nele o handler do PHP; aqui só
             # acrescentamos o rewrite quando ele ainda não existe.
@@ -213,10 +233,12 @@ jobs:
                 RewriteRule ^(.*)$ public/$1 [L]
             </IfModule>
             EOF
+            # O handler do PHP e escrito pelo MultiPHP Manager do cPanel, nao pelo deploy.
+            grep -q 'AddHandler' .htaccess 2>/dev/null || echo "AVISO: .htaccess da raiz sem AddHandler. Confira o MultiPHP Manager."
             mkdir -p bootstrap/cache storage/framework/cache/data storage/framework/sessions storage/framework/views storage/logs storage/app/public
             chmod -R 775 storage bootstrap/cache
             rm -f bootstrap/cache/*.php
-            $PHP composer.phar install --no-interaction --prefer-dist --optimize-autoloader --no-dev
+            $COMPOSER install --no-interaction --prefer-dist --optimize-autoloader --no-dev
             $PHP artisan optimize:clear
             $PHP artisan migrate --force
             # Cria o bucket S3 se faltar e reaplica a leitura pública de photos/*
