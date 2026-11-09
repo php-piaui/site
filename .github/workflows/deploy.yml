@@ -21,7 +21,7 @@ name: Deploy App
 on:
   push:
     branches:
-      - disabled
+      - main
   workflow_dispatch:
 
 env:
